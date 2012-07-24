@@ -1,0 +1,25 @@
+/* XPM */
+static char *kiss__[] = {
+/* columns rows colors chars-per-pixel */
+"34 15 4 1",
+"  c #FFFFFF",
+". c #000000",
+"X c #FFFF00",
+"o c None",
+/* pixels */
+"ooooo.....ooooooooo.....oooooooooo",
+"ooo..XXXXX..ooooo..XXXXX..oooooooo",
+"oo.XXXXXXXXX.ooo.XXXXXXXXX.ooooooo",
+"o.XXXXXXXXXXX.o.XXXXXXXXXXX.oooooo",
+"o.XX..XXX..XX.o.XX..XXXXXXX.oooooo",
+".XX.XX.X.XX.XX.XXXXXXXXXXXXX.ooooo",
+".XXXXXXXXXXXXX.XXXXXXXXXXXXX.ooooo",
+".XXXXXXXXXXXXX.XXXXXXXXXXXXX.ooooo",
+".XXXXXXXXXXXXXXXXXXXXXXXXXXX.ooooo",
+".XX.........XXXXXXXXXXXXXXXX.ooooo",
+"o.XX.......XX.XXXXXXXXXXXXX.oooooo",
+"o.XXX.....XXX...XXXXXXXXXXX.oooooo",
+"oo.XXXXXXXXX.ooo.XXXXXXXXX.ooooooo",
+"ooo..XXXXX..ooooo..XXXXX..oooooooo",
+"ooooo.....ooooooooo.....oooooooooo"
+};

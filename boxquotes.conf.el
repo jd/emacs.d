@@ -1,0 +1,5 @@
+(setq boxquote-top-and-tail "─────")
+(setq boxquote-top-corner "╭")
+(setq boxquote-bottom-corner "╰")
+(setq boxquote-side "│")
+(setq boxquote-title-format " %s")

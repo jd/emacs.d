@@ -1,0 +1,12 @@
+jd-autoloads.el
+saveplace
+oauth2.plstore
+backups
+el-get
+*-score
+tramp
+url
+elpa
+#*
+history
+auto-save-list

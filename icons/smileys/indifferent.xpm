@@ -1,0 +1,29 @@
+/* XPM */
+static char *indifferent[] = {
+/* columns rows colors chars-per-pixel */
+"15 15 8 1",
+"  c #FFFFFF",
+". c #000000",
+"X c #FFFF00",
+"o c #FF0000",
+"O c None",
+"+ c #000000",
+"@ c #000000",
+"# c #000000",
+/* pixels */
+"OOOOO.....OOOOO",
+"OOO..XXXXX..OOO",
+"OO.XXXXXXXXX.OO",
+"O.XXXXXXXXXXX.O",
+"O.XXX..X..XXX.O",
+".XXXX..X..XXXX.",
+".XXXXXXXXXXXXX.",
+".XXXXXXXXXXXXX.",
+".XXXXXXXXXXXXX.",
+".XXXXXXXXXXXXX.",
+"O.XXX.....XXX.O",
+"O.XXXXXXXXXXX.O",
+"OO.XXXXXXXXX.OO",
+"OOO..XXXXX..OOO",
+"OOOOO.....OOOOO"
+};

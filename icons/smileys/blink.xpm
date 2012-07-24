@@ -1,0 +1,25 @@
+/* XPM */
+static char *blink[] = {
+/* columns rows colors chars-per-pixel */
+"15 15 4 1",
+"  c #000000",
+". c #FFFF00",
+"X c None",
+"o c #000000",
+/* pixels */
+"XXXXX     XXXXX",
+"XXX  .....  XXX",
+"XX ......... XX",
+"X ........... X",
+"X . ... .  .. X",
+" ...   ..  ... ",
+" ............. ",
+" ............. ",
+" ............. ",
+" .. ....... .. ",
+"X .. ..... .. X",
+"X ...     ... X",
+"XX ......... XX",
+"XXX  .....  XXX",
+"XXXXX     XXXXX"
+};

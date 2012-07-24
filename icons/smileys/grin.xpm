@@ -1,0 +1,25 @@
+/* XPM */
+static char *grin[] = {
+/* columns rows colors chars-per-pixel */
+"15 15 4 1",
+"  c #000000",
+". c #59FFC8",
+"X c #FFFFFF",
+"o c None",
+/* pixels */
+"ooooo     ooooo",
+"ooo  .....  ooo",
+"oo ......... oo",
+"o ..  ...  .. o",
+"o . .. . .. . o",
+" ............. ",
+" .           . ",
+" . XX XXX XX . ",
+" . XX XXX XX . ",
+" . XX XXX XX . ",
+"o . X XXX X . o",
+"o ..  XXX  .. o",
+"oo ..     .. oo",
+"ooo  .....  ooo",
+"ooooo     ooooo"
+};
