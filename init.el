@@ -12,6 +12,14 @@
   (let ((buf (get-file-buffer generated-autoload-file)))
     (when buf (kill-buffer buf))))
 
+;; Each file named <somelibrary>.pre.conf.el is loaded right now, e.g.
+;; before the library is loaded. This should really not be needed, but some
+;; libraries are badly designed and need this until I have the time to fix
+;; them.
+(dolist (file (directory-files user-emacs-directory))
+  (when (string-match (format "^\\(.+\\)\\.preload\\.el$") file)
+    (load (concat user-emacs-directory file))))
+
 ;; Each file named <somelibrary>.conf.el is loaded just after the library is
 ;; loaded.
 (dolist (file (directory-files user-emacs-directory))

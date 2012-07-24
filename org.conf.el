@@ -1,5 +1,3 @@
-;; To make windmove work
-(setq org-replace-disputed-keys t)
 (setq org-directory "~/Org")
 (setq org-hide-leading-stars t)
 (setq org-src-fontify-natively t)
