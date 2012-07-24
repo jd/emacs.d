@@ -28,7 +28,6 @@
 (require 'ob)
 (require 'org-crypt)
 (require 'org-habit)
-(require 'org-location-google-maps)
 (require 'naquadah-theme)
 (require 'saveplace)
 (require 'uniquify)
