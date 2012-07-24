@@ -28,6 +28,7 @@
 (require 'ob)
 (require 'org-crypt)
 (require 'org-habit)
+(require 'org-plot)
 (require 'naquadah-theme)
 (require 'saveplace)
 (require 'uniquify)
