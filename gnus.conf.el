@@ -105,7 +105,9 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
                         (append image
                                 '(:ascent center)))
           (propertize " " 'display `(space . (:width ,(car (image-size image))))))
-      string)))
+      (if image-p
+          string
+        " "))))
 
 (defun gnus-user-format-function-e (dummy)
   (jd:gnus-image-or-space (char-to-string gnus-unread-mark) "~/.emacs.d/icons/email.png"
