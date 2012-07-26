@@ -15,7 +15,7 @@
 (setq gnus-summary-line-format
       (concat "%z%U%R %~(max-right 17)~(pad-right 17)&user-date;  "
               "%~(max-right 20)~(pad-right 20)f %B%s\n"))
-(setq gnus-message-archive-group "sent")
+(setq gnus-message-archive-group "nnimap+Naquadah:sent")
 ;; Expire
 (setq gnus-total-expirable-newsgroups
       (concat "^\\("
@@ -29,7 +29,7 @@
 (setq gnus-parameters
       '(("^lists\\."
          (subscribed . t)
-         (gnus-message-archive-group . "sent"))
+         (gnus-message-archive-group . "nnimap+Naquadah:sent"))
         ("^lists\\.ding"
          (to-list . "ding@gnus.org"))
         ("^lists\\.launchpad\\.\\(.+\\)"
