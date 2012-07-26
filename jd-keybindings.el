@@ -20,10 +20,10 @@
                     (call-interactively 'find-file))))
 
 (global-set-key [f11]
-                (defun jd:set-frame-fullscreen ()
+                (defun jd:set-frame-maximized ()
                   (interactive)
                   (set-frame-parameter nil 'fullscreen
-                                       (if (frame-parameter nil 'fullscreen) nil 'fullboth))))
+                                       (if (eq (frame-parameter nil 'fullscreen) 'maximized) nil 'maximized))))
 
 (global-set-key "\C-cnu"
                 (lambda ()
