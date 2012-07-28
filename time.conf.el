@@ -10,7 +10,7 @@
                   (when (and (numberp unread)
                              (> unread 0))
                     (return group)))))))))
-(setq display-time-format "│ %H:%M")
+(setq display-time-format "")
 (setq display-time-default-load-average nil) ; no load average displayed
 (setq display-time-use-mail-icon t)
 (setq display-time-mail-icon
