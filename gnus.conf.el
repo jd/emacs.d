@@ -32,6 +32,8 @@
          (gnus-message-archive-group . "nnimap+Naquadah:sent"))
         ("^lists\\.ding"
          (to-list . "ding@gnus.org"))
+        ("^lists\\.awesome\\(-devel\\)?"
+         (to-list . "awesome\\1@naquadah.org"))
         ("^lists\\.launchpad\\.\\(.+\\)"
          (to-list . "\\1@lists.launchpad.net")
          (list-identifier . "\\\\[\\1\\\\]")
