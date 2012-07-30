@@ -73,4 +73,6 @@
 
 (global-set-key "\C-cis" 'erc-iswitchb)
 
+(global-set-key (kbd "C-x C-/") 'goto-last-change)
+
 (provide 'jd-keybindings)

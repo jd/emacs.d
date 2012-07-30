@@ -27,4 +27,5 @@
           haskell-mode
           php-mode
           cmake-mode
+          goto-last-change
           git-commit-mode))
