@@ -27,6 +27,9 @@
     (eval-after-load (match-string-no-properties 1 file)
       `(load ,(concat user-emacs-directory file)))))
 
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
+
 ;; Require el-get to install packages
 (require 'el-get)
 
