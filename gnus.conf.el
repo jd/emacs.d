@@ -204,6 +204,12 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
 ;; gnus-score
 (setq gnus-home-score-file "~/.gnus.score")
 
+;; gnus-win
+;; Vertical display when replying
+(gnus-add-configuration '(reply (horizontal 1.0 (message .50 point) (article 1.0))))
+(gnus-add-configuration '(reply-yank (horizontal 1.0 (message .50 point) (article 1.0))))
+(gnus-add-configuration '(forward (horizontal 1.0 (message .50 point) (article 1.0))))
+
 ;; No cursor
 (defun jd:no-cursor ()
   (setq cursor-type nil))
