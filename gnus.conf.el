@@ -213,18 +213,23 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
 (gnus-add-configuration
  ;; two panes side-by-side
  '(summary (horizontal 1.0
-                       (group .5)
                        (summary 1.0 point))))
 ;; Vertical display when replying
 (gnus-add-configuration '(reply (vertical 1.0
-                                          (summary .2)
-                                          (horizontal 1.0 (message .50 point) (article 1.0)))))
+                                          (horizontal 1.0
+                                                      (message .5 point)
+                                                      (article 1.0))
+                                          (summary .2))))
 (gnus-add-configuration '(reply-yank (vertical 1.0
-                                               (summary .2)
-                                               (horizontal 1.0 (message .50 point) (article 1.0)))))
+                                               (horizontal 1.0
+                                                           (message .5 point)
+                                                           (article 1.0))
+                                               (summary .2))))
 (gnus-add-configuration '(forward (vertical 1.0
-                                            (summary .2)
-                                            (horizontal 1.0 (message .50 point) (article 1.0)))))
+                                            (horizontal 1.0
+                                                        (message .5 point)
+                                                        (article 1.0))
+                                            (summary .2))))
 
 ;; No cursor
 (defun jd:no-cursor ()
