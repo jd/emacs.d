@@ -138,11 +138,11 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
       gnus-read-mark ?✓
       gnus-del-mark ?✗
       gnus-killed-mark ?☠
-      gnus-replied-mark ?⟲
-      gnus-forwarded-mark ?⤳
+      gnus-replied-mark ?↺
+      gnus-forwarded-mark ?↪
       gnus-cached-mark ?☍
-      gnus-recent-mark ?★
-      gnus-unseen-mark ?✩
+      gnus-recent-mark ?✩
+      gnus-unseen-mark ?★
       gnus-unread-mark ?✉
       gnus-score-over-mark ?↑           ; ↑ ☀
       gnus-score-below-mark ?↓         ; ↓ ☂
