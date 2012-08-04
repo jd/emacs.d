@@ -45,7 +45,7 @@
 (global-set-key "\C-cm" 'magit-status)
 
 (global-set-key (kbd "<f5>")
-                (lambda () (interactive) (compile compile-Ycommand)))
+                (lambda () (interactive) (compile compile-command)))
 
 (require 'multi-term)
 (global-set-key [f6] (lambda () (interactive)
