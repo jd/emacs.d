@@ -1,6 +1,4 @@
 (require 'jd-email)
-;; Check for new mail
-(require 'gnus-demon)
 ;; Move spam into spam
 (require 'spam)
 
@@ -91,6 +89,11 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
 (setq gnus-save-newsrc-file nil)
 (setq gnus-read-newsrc-file nil)
 (setq gnus-always-read-dribble-file t)
+;; Check every 5 minutes when emacs is idle when Gnus is started
+(add-hook 'gnus-startup-hook
+          (defun jd:gnus-check-for-new-mail ()
+            (gnus-demon-add-handler 'gnus-group-get-new-news 5 t)))
+
 
 ;; gnus-group
 ;; Redefine this to nil because I pressed it by mistake too many times
