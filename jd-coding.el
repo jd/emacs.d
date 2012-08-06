@@ -13,20 +13,23 @@
     rst-mode)
   "What considering as programming languages.")
 
+(defun jd:customize-programming-language-mode ()
+  (font-lock-add-keywords
+   nil
+   '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\|NOTE\\)"
+      1
+      '(:box (:color "grey10" :line-width 2) :background "red" :bold t :foreground "yellow")
+      prepend)))
+  (idle-highlight-mode 1)
+  (rainbow-mode 1)
+  (rainbow-delimiters-mode 1)
+  (setq show-trailing-whitespace t)
+  (flyspell-prog-mode))
+
 (dolist (mode jd:programming-language-major-modes)
   (add-hook
    (intern (concat (symbol-name mode) "-hook"))
-   (lambda ()
-     (font-lock-add-keywords
-      nil
-      '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\|NOTE\\)"
-         1
-         '(:box (:color "grey10" :line-width 2) :background "red" :bold t :foreground "yellow")
-         prepend)))
-     (rainbow-mode 1)
-     (rainbow-delimiters-mode 1)
-     (setq show-trailing-whitespace t)
-     (flyspell-prog-mode))))
+   'jd:customize-programming-language-mode))
 
 ;; CC mode
 (c-add-style "jd"

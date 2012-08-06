@@ -28,4 +28,5 @@
           php-mode
           cmake-mode
           goto-last-change
+          idle-highlight-mode
           git-commit-mode))
