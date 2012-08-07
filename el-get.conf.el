@@ -29,4 +29,5 @@
           cmake-mode
           goto-last-change
           idle-highlight-mode
+          org-mode
           git-commit-mode))

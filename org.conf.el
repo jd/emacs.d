@@ -1,3 +1,4 @@
+(require 'org-depend)
 (setq org-directory "~/Org")
 (setq org-hide-leading-stars t)
 (setq org-src-fontify-natively t)
