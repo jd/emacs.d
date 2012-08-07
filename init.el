@@ -65,7 +65,7 @@ This variable is used in some places.")
 (setq next-screen-context-lines 5)      ; I want to keep more lines when
                                         ; switching pages
 (setq use-dialog-box nil)               ; Seriously…
-(setq source-directory "~/Work/src/emacs")
+(setq source-directory "~/Work/src/emacs/src")
 (put 'narrow-to-region 'disabled nil)
 (set-default 'indent-tabs-mode nil)    ; always use spaces to indent, no tab
 
