@@ -31,6 +31,8 @@
    (intern (concat (symbol-name mode) "-hook"))
    'jd:customize-programming-language-mode))
 
+(semantic-mode 1)
+
 ;; CC mode
 (c-add-style "jd"
 	     '("gnu"
