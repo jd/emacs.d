@@ -52,7 +52,9 @@
 	       (c-block-comment-prefix . "* ")
 	       (c-echo-syntactic-information-p . t)
 	       (c-basic-offset . 4)))
-(setq c-block-comment-prefix "* ")
+;; Don't insert electric newlines on ;
+;; That makes me CRAZY
+(setq-default c-hanging-semi&comma-criteria nil)
 
 (add-hook 'c-mode-common-hook
 	  (lambda ()
