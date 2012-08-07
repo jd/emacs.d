@@ -1,1 +1,1 @@
-(setq flyspell-use-meta-tab nil)
+(define-key flyspell-mode-map "\M-\t" nil)
