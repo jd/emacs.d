@@ -30,6 +30,12 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+
+(defvar jd:projects-directory (expand-file-name "~/Work/src")
+  "Where I store my projects.
+This variable is used in some places.")
+
+
 ;; Require el-get to install packages
 (require 'el-get)
 

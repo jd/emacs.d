@@ -8,7 +8,7 @@
          ,@(mapcar (lambda (directory)
                      `(,(file-name-nondirectory directory) (filename . ,directory)))
                    (remove-if-not 'file-directory-p
-                                  (directory-files "~/Work/src/" t "^[^\.][^\.]*" t)))
+                                  (directory-files jd:projects-directory t "^[^\.][^\.]*" t)))
          ,@(mapcar (lambda (directory)
                      `(,(concat "Debian/" (file-name-nondirectory directory)) (filename . ,directory)))
                    (remove-if-not 'file-directory-p
