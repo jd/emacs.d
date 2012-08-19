@@ -68,6 +68,7 @@
 
 (global-set-key (kbd "C-c d v") 'jd:debian-view-changelog)
 (global-set-key (kbd "C-c d V") 'jd:debian-view-online-changelog)
+(global-set-key (kbd "C-c d b") 'gnus-read-ephemeral-debian-bug-group)
 
 (global-set-key (kbd "S-<f12>") 'jd:irc)
 
