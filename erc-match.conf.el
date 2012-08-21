@@ -22,3 +22,5 @@ Put each name on a line."
 
 (setq erc-pals (jd:erc-read-file jd:erc-pals-file))
 (setq erc-fools (jd:erc-read-file jd:erc-fools-file))
+
+(setq erc-match-exclude-server-buffer t)
