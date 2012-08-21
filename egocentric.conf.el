@@ -1,1 +1,1 @@
-(setq egocentric-additional-keywords '("Julien" "Danjou" "jd"))
+(setq egocentric-additional-keywords '("Julien" "Danjou" "jd" "@jd"))
