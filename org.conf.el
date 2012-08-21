@@ -48,3 +48,9 @@
 (add-hook 'org-mode-hook (lambda ()
                            (add-hook 'after-save-hook 'jd:org-decrypt-entires-silently)))
 
+(setq org-clock-persist-query-save t)
+(setq org-show-notification-handler
+      (defun jd:org-show-notification-handler (notification)
+        (require 'notifications)
+        (notifications-notify
+         :title notification)))
