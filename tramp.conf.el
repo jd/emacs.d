@@ -1,1 +1,1 @@
-(add-to-list 'tramp-default-proxies-alist '((".*" "\\`root\\'" "/ssh:%h:")))
+(add-to-list 'tramp-default-proxies-alist '(".*" "\\`root\\'" "/ssh:%h:"))
