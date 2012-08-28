@@ -22,12 +22,17 @@
 
 ;;; Commentary:
 
-;; This implements notifications using `notifications-notify' on
-;; PRIVMSG received and on public nickname mentions.
+;; This implements notifications using `notifications-notify' on new mails
+;; received.
 
 ;;; Code:
 
 (require 'notifications)
+(require 'gnus-sum)
+(require 'gnus-group)
+(require 'gnus-int)
+(require 'gnus-art)
+(require 'gnus-utils)
 (require 'google-contacts nil t)        ; Optional
 
 (defgroup gnus-notifications nil
@@ -120,13 +125,17 @@ This is a typically a function to add in
                        (address (cadr address-components))
                        (photo-file (gnus-notifications-get-photo-file
                                     address)))
-                  (when (notifications-notify :title (concat "New message from "
-                                                             (or (car address-components) address))
-                                              :body (mail-fetch-field "Subject")
-                                              :app-icon (image-search-load-path "gnus/gnus.png")
-                                              :app-name "Gnus"
-                                              :category "email.arrived"
-                                              :image-path photo-file)
+                  (when (or
+                         ;; Ignore mails from ourselves
+                         (gnus-string-match-p gnus-ignored-from-addresses
+                                              address)
+                         (notifications-notify :title (concat "New message from "
+                                                              (or (car address-components) address))
+                                               :body (mail-fetch-field "Subject")
+                                               :app-icon (image-search-load-path "gnus/gnus.png")
+                                               :app-name "Gnus"
+                                               :category "email.arrived"
+                                               :image-path photo-file))
                     ;; Register that we did notify this message
                     (setcdr group-notifications (cons article (cdr group-notifications))))
                   (when photo-file
