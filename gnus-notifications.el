@@ -32,7 +32,7 @@
 (require 'gnus-group)
 (require 'gnus-int)
 (require 'gnus-art)
-(require 'gnus-utils)
+(require 'gnus-util)
 (require 'google-contacts nil t)        ; Optional
 
 (defgroup gnus-notifications nil
