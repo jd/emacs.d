@@ -1,11 +1,11 @@
 ;; gnus-notifications.el -- Send notification on new message in Gnus
 
-;; Copyright (C) 2012 Julien Danjou
+;; Copyright (C) 2012 Free Software Foundation, Inc.
 
 ;; Author: Julien Danjou <julien@danjou.info>
-;; Keywords: comm
+;; Keywords: news
 
-;; This file is NOT part of GNU Emacs.
+;; This file is part of GNU Emacs.
 
 ;; GNU Emacs is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
