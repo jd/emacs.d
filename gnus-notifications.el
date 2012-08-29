@@ -22,8 +22,10 @@
 
 ;;; Commentary:
 
-;; This implements notifications using `notifications-notify' on new mails
-;; received.
+;; This implements notifications using `notifications-notify' on new
+;; messages received.
+;; Use (add-hook 'gnus-after-getting-new-news-hook 'gnus-notifications)
+;; to get notifications just after getting the new news.
 
 ;;; Code:
 
@@ -95,7 +97,7 @@ This check for new messages that are in group with a level lower
 or equal to `gnus-notifications-minimum-level' and send a
 notification using `notifications-notify' for it.
 
-This is a typically a function to add in
+This is typically a function to add in
 `gnus-after-getting-new-news-hook'"
   (dolist (entry gnus-newsrc-alist)
     (let ((group (car entry)))
