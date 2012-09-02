@@ -21,7 +21,6 @@
                   "CANCELED(c@)")
         (sequence "PROJECT(j!)" "|" "CANCELED(c@)" "DONE(d!)")))
 (setq org-enforce-todo-dependencies t)
-(setq org-enforce-todo-checkbox-dependencies t)
 (setq org-link-abbrev-alist
       '(("colissimo" . "http://www.coliposte.net/particulier/suivi_particulier.jsp?colispart=")))
 
