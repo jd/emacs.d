@@ -177,6 +177,8 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
 (setq gnus-use-header-prefetch t)       ; prefetch header for next group
 
 ;; gnus-art
+(add-to-list 'gnus-emphasis-alist
+             '("\\b@jd\\|Julien\\|Danjou\\b" 0 0 warning))
 (setq gnus-visible-headers
       (concat gnus-visible-headers "\\|^User-Agent:\\|^X-Mailer:"))
 (setq gnus-sorted-header-list
@@ -190,7 +192,6 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
 (setq gnus-treat-from-gravatar 'head)
 (setq gnus-treat-mail-gravatar 'head)
 (setq gnus-treat-body-boundary nil)    ; No body/header separator
-(add-hook 'gnus-article-prepare-hook 'egocentric-mode-on)
 (add-to-list 'gnus-buttonized-mime-types "multipart/signed")
 (setq gnus-blocked-images nil)          ; HTML rendering
 

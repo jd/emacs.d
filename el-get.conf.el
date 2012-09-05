@@ -8,7 +8,6 @@
           nognus
           go-mode
           el-get
-          egocentric
           rainbow-mode
           google-maps
           google-weather
