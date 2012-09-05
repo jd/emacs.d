@@ -30,4 +30,5 @@
           goto-last-change
           idle-highlight-mode
           org-mode
+          mmm-mode
           git-commit-mode))
