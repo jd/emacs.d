@@ -94,6 +94,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
           (defun jd:gnus-check-for-new-mail ()
             (gnus-demon-add-handler 'gnus-group-get-new-news 5 t)))
 (add-hook 'gnus-after-getting-new-news-hook 'gnus-notifications)
+(add-hook 'gnus-after-getting-new-news-hook 'gnus-group-find-new-groups)
 
 ;; gnus-group
 ;; Redefine this to nil because I pressed it by mistake too many times
