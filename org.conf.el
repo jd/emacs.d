@@ -22,7 +22,8 @@
         (sequence "PROJECT(j!)" "|" "CANCELED(c@)" "DONE(d!)")))
 (setq org-enforce-todo-dependencies t)
 (setq org-link-abbrev-alist
-      '(("colissimo" . "http://www.coliposte.net/particulier/suivi_particulier.jsp?colispart=")))
+      '(("colissimo" . "http://www.coliposte.net/particulier/suivi_particulier.jsp?colispart=")
+        ("launchpad" . "https://bugs.launchpad.net/bugs/")))
 
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 (add-hook 'org-mode-hook
