@@ -52,7 +52,6 @@
           (org-agenda-todo-ignore-deadlines nil)))
         ("b" "Things to buy any time" tags-todo "+tobuy+SCHEDULED=\"\"")
         ("y" "Syadmin stuff to do" tags-todo "+sysadmin+SCHEDULED=\"\"")))
-(setq org-agenda-span 14)
 (setq org-agenda-skip-additional-timestamps-same-entry nil)
 (setq org-agenda-skip-scheduled-if-done t)
 (setq org-agenda-skip-deadline-if-done t)
