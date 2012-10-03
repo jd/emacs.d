@@ -45,8 +45,9 @@
     (unless m
       (set-buffer-modified-p nil))))
 (add-hook 'org-mode-hook 'jd:org-decrypt-entires-silently)
-(add-hook 'org-mode-hook (lambda ()
-                           (add-hook 'after-save-hook 'jd:org-decrypt-entires-silently)))
+(add-hook 'org-mode-hook (defun jd:org-decrypt-after-save ()
+                           (add-hook (make-variable-buffer-local 'after-save-hook)
+                                     'jd:org-decrypt-entires-silently)))
 
 (setq org-clock-persist-query-save t)
 (setq org-show-notification-handler
