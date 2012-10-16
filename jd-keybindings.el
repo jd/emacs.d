@@ -45,7 +45,11 @@
 (global-set-key "\C-cm" 'magit-status)
 
 (global-set-key (kbd "<f5>")
-                (lambda () (interactive) (compile compile-command)))
+                (defun jd:compile ()
+                  (interactive)
+                  (compile compile-command)))
+
+(global-set-key (kbd "S-<f5>") 'nosetests-compile)
 
 (require 'multi-term)
 (global-set-key [f6] (lambda () (interactive)
