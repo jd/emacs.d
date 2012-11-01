@@ -179,7 +179,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
 
 ;; gnus-art
 (add-to-list 'gnus-emphasis-alist
-             '("\\b@jd\\|Julien\\|Danjou\\b" 0 0 warning))
+             '("\\b@jd\\|Julien\\|Danjou\\|jd\\b" 0 0 warning))
 (setq gnus-visible-headers
       (concat gnus-visible-headers "\\|^User-Agent:\\|^X-Mailer:"))
 (setq gnus-sorted-header-list
