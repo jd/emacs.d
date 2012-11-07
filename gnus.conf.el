@@ -126,6 +126,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
 (setq gnus-group-line-format "%ue%uM %S%p[%5t][%L]\t%P%5y:%B%(%g%)%O\n")
 
 ;; gnus-sum
+(setq gnus-summary-thread-gathering-function 'gnus-gather-threads-by-references)
 (setq gnus-ignored-from-addresses jd:email-addresses-regexp)
 (setq gnus-thread-sort-functions '(gnus-thread-sort-by-number
                                    gnus-thread-sort-by-subject
