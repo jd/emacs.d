@@ -6,6 +6,7 @@
 
 (setq erc-header-line-format "%t: %o")
 (setq erc-join-buffer 'bury)
+(setq erc-warn-about-blank-lines nil)
 
 (setq erc-prompt (lambda ()
                    (if erc-network
