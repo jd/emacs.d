@@ -26,3 +26,8 @@
       (error "No previous URL button."))))
 
 (define-key erc-mode-map [backtab] 'erc-button-url-previous)
+
+(add-hook 'erc-mode-hook
+          (defun jd:fix-scrolling-bug ()
+            "See http://debbugs.gnu.org/cgi/bugreport.cgi?bug=11697"
+            (set (make-local-variable 'scroll-conservatively) 1000)))
