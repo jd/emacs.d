@@ -4,4 +4,3 @@
 (setq delete-old-versions t)
 (setq backup-by-copying t)
 (setq version-control t)
-(add-to-list 'auto-mode-alist '("Rakefile\\'" . ruby-mode))
