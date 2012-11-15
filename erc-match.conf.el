@@ -1,4 +1,4 @@
-(setq erc-keywords '("julien" "danjou" "awesome" "naquadah"))
+(setq erc-keywords '("julien" "danjou" "naquadah"))
 
 (defcustom jd:erc-pals-file "~/.erc.pals"
   "File containing a list of pals for ERC.
