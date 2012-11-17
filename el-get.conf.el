@@ -30,4 +30,5 @@
           idle-highlight-mode
           org-mode
           mmm-mode
+          clojure-mode
           git-commit-mode))
