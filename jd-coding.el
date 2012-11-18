@@ -85,8 +85,8 @@
   (add-hook
    (intern (concat (symbol-name mode) "-hook")) 'turn-on-eldoc-mode))
 
-(let ((f (expand-file-name "~/quicklisp/slime-helper.el")))
-  (when (file-exists-p f)
-    (load f)))
+;; lisp
+(add-hook 'lisp-mode-hook (defun jd:turn-on-slime-mode ()
+                            (slime-mode 1)))
 
 (provide 'jd-coding)

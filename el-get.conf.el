@@ -30,5 +30,7 @@
           idle-highlight-mode
           org-mode
           mmm-mode
-          clojure-mode
+          ;; bugged with slime
+          ;; clojure-mode
+          slime
           git-commit-mode))
