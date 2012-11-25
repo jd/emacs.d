@@ -10,6 +10,7 @@
     nxml-mode
     diff-mode
     haskell-mode
+    sql-mode
     rst-mode)
   "What considering as programming languages.")
 
