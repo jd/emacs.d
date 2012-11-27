@@ -6,9 +6,6 @@
 (setq gnus-select-method '(nnimap "Naquadah"
                                   (nnimap-address "mail.naquadah.org")
                                   (nnimap-stream ssl)))
-(setq gnus-secondary-select-methods '((nnimap "Debian France"
-                                              (nnimap-address "france.debian.net")
-                                              (nnimap-stream ssl))))
 
 (setq gnus-novice-user nil)             ; I AM NOT!
 (setq gnus-spam-process-destinations
@@ -172,7 +169,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
          (address "acid@debian.org")
          (organization "Debian"))
         ("lists\\.debian\\.france"
-         (address "julien@danjou.info"))
+         (address "julien@danjou.info"))<
         ("INBOX\\.nous"
          (reply-to "nous@danjou.info"))))
 (setq gnus-gcc-mark-as-read t)
