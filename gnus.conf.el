@@ -169,7 +169,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
          (address "acid@debian.org")
          (organization "Debian"))
         ("lists\\.debian\\.france"
-         (address "julien@danjou.info"))<
+         (address "julien@danjou.info"))
         ("INBOX\\.nous"
          (reply-to "nous@danjou.info"))))
 (setq gnus-gcc-mark-as-read t)
