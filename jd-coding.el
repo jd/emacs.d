@@ -88,6 +88,7 @@
 
 ;; lisp
 (add-hook 'lisp-mode-hook (defun jd:turn-on-slime-mode ()
-                            (slime-mode 1)))
+                            (slime-mode 1)
+                            (slime-autodoc-mode 1)))
 
 (provide 'jd-coding)
