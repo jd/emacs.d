@@ -5,7 +5,7 @@
         '(naquadah-theme
           highlight-indentation
           browse-kill-ring
-          nognus
+          gnus
           go-mode
           el-get
           rainbow-mode
