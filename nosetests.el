@@ -34,7 +34,9 @@
 ;;;###autoload
 (defun nosetests-compile ()
   (interactive)
-  (let ((default-directory (nosetests-get-root-directory)))
+  (let ((default-directory (nosetests-get-root-directory))
+        (compilation-auto-jump-to-first-error nil)
+        (compilation-scroll-output nil))
     (compile (nosetests-get-command))))
 
 (provide 'nosetests)
