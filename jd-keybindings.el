@@ -42,7 +42,7 @@
 
 (global-set-key "\M-/" 'hippie-expand)
 
-(global-set-key "\C-cm" 'magit-status)
+(global-set-key (kbd "C-c C-,") 'magit-status)
 
 (global-set-key (kbd "<f5>")
                 (defun jd:compile ()
