@@ -100,7 +100,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
 ;; gnus-group
 ;; Redefine this to nil because I pressed it by mistake too many times
 (define-key gnus-group-mode-map (kbd "M-c") nil)
-(setq gnus-group-default-list-level (- gnus-level-subscribed 2))
+(setq gnus-group-default-list-level (- gnus-level-subscribed 1))
 (setq gnus-group-sort-function '(gnus-group-sort-by-alphabet
                                  gnus-group-sort-by-level))
 
