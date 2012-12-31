@@ -1,18 +1,18 @@
 (defun jd:erc-start ()
   (erc-tls
-   :server "prometheus.naquadah.org"
+   :server "orion.naquadah.org"
    :port 6666
    :nick "jd-naquadah")
   (erc-tls
-   :server "prometheus.naquadah.org"
+   :server "orion.naquadah.org"
    :port 6666
    :nick "jd-oftc")
   (erc-tls
-   :server "prometheus.naquadah.org"
+   :server "orion.naquadah.org"
    :port 6666
    :nick "jd-freenode")
   (erc-tls
-   :server "prometheus.naquadah.org"
+   :server "orion.naquadah.org"
    :port 6666
    :nick "jd-lost-oasis"))
 
