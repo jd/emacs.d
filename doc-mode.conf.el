@@ -1,5 +1,4 @@
-(define-key doc-mode-map (kbd "C-c C-c")
-  (defun jd:doc-mode-preview-pdf ()
+(define-key doc-mode-map (kbd "C-c C-v")
+  (defun jd:doc-preview ()
     (interactive)
-    (when (= (shell-command (concat "a2x -fpdf -dbook " (buffer-file-name))) 0)
-      (shell-command (concat "xdg-open " (file-name-sans-extension (buffer-file-name)) ".pdf")))))
+    (async-shell-command (concat "evince " (file-name-sans-extension (buffer-file-name)) ".pdf"))))

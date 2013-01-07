@@ -13,6 +13,7 @@
       '((sequence "TODO(t!)"
                   "STARTED(s!)"
                   "DELEGATED(g@)"
+                  "BLOCKED(b@)"
                   "FEEDBACK(f!/@)"
                   "REWORK(r!/!)"
                   "VERIFY(v/!)"
