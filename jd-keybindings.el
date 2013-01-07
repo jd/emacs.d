@@ -49,8 +49,6 @@
                   (interactive)
                   (compile compile-command)))
 
-(global-set-key (kbd "S-<f5>") 'nosetests-compile)
-
 (require 'multi-term)
 (global-set-key [f6] (lambda () (interactive)
                        (unless (multi-term-dedicated-exist-p)
