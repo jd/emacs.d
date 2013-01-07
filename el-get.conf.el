@@ -33,5 +33,6 @@
           clojure-mode
           slime
           slime-annot
+          doc-mode
           jinja2-mode
           git-commit-mode))
