@@ -44,10 +44,7 @@
 
 (global-set-key (kbd "C-c C-,") 'magit-status)
 
-(global-set-key (kbd "<f5>")
-                (defun jd:compile ()
-                  (interactive)
-                  (compile compile-command)))
+(global-set-key (kbd "<f5>") 'recompile)
 
 (require 'multi-term)
 (global-set-key [f6] (lambda () (interactive)
