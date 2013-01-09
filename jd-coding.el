@@ -25,6 +25,7 @@
   (rainbow-mode 1)
   (rainbow-delimiters-mode 1)
   (setq show-trailing-whitespace t)
+  (flymake-mode 1)
   (flyspell-prog-mode))
 
 (dolist (mode jd:programming-language-major-modes)
