@@ -15,6 +15,7 @@
   "What considering as programming languages.")
 
 (defun jd:customize-programming-language-mode ()
+  (jd:font-lock-add-hack-keywords)
   (idle-highlight-mode 1)
   (rainbow-mode 1)
   (rainbow-delimiters-mode 1)
@@ -23,7 +24,6 @@
   (flyspell-prog-mode))
 
 (dolist (mode jd:programming-language-major-modes)
-  (jd:font-lock-add-hack-keywords)
   (add-hook
    (intern (concat (symbol-name mode) "-hook"))
    'jd:customize-programming-language-mode))
