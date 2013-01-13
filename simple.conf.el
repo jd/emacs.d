@@ -22,8 +22,9 @@
   "Delete spaces before going to next line."
   (jd:delete-horizontal-space-on-empty-lines))
 
+
 (font-lock-add-keywords
- 'fundamental-mode
+ 'text-mode
  '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\|NOTE\\)"
     1
     '(:box (:color "grey10" :line-width 2) :background "red" :bold t :foreground "yellow")
