@@ -4,7 +4,7 @@
          (local-file (file-relative-name
                       temp-file
                       (file-name-directory buffer-file-name))))
-    `("python-flymake" (,local-file))))
+    `("flake8" (,local-file))))
 
 (add-to-list 'flymake-allowed-file-name-masks
              '("\\.py\\'" flymake-pyflakes-init))
