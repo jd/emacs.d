@@ -79,8 +79,9 @@
   "Mode that are used to do Elisp programming.")
 
 (dolist (mode jd:elisp-programming-major-modes)
-  (add-hook
-   (intern (concat (symbol-name mode) "-hook")) 'turn-on-eldoc-mode))
+  (let ((sym (intern (concat (symbol-name mode) "-hook"))))
+    (add-hook sym 'turn-on-eldoc-mode)
+    (add-hook sym 'enable-paredit-mode)))
 
 ;; lisp
 (add-hook 'lisp-mode-hook (defun jd:turn-on-slime-mode ()

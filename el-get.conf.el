@@ -34,5 +34,6 @@
           slime
           slime-annot
           doc-mode
+          paredit
           jinja2-mode
           git-commit-mode))
