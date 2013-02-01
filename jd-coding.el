@@ -5,7 +5,6 @@
     lua-mode
     cmake-mode
     tex-mode                            ; LaTeX inherits
-    sgml-mode                           ; HTML inherits
     css-mode
     nxml-mode
     diff-mode
@@ -14,19 +13,24 @@
     rst-mode)
   "What considering as programming languages.")
 
-(defun jd:customize-programming-language-mode ()
+(defun jd:customize-prog-mode-common ()
   (jd:font-lock-add-hack-keywords)
   (idle-highlight-mode 1)
   (rainbow-mode 1)
   (rainbow-delimiters-mode 1)
   (setq show-trailing-whitespace t)
-  (flymake-mode 1)
   (flyspell-prog-mode))
+
+(defun jd:customize-programming-language-mode ()
+  (jd:customize-prog-mode-common)
+  (flymake-mode 1))
 
 (dolist (mode jd:programming-language-major-modes)
   (add-hook
    (intern (concat (symbol-name mode) "-hook"))
    'jd:customize-programming-language-mode))
+
+(add-hook 'sgml-mode-hook 'jd:customize-prog-mode-common)
 
 (semantic-mode 1)
 (global-semantic-stickyfunc-mode 1)
