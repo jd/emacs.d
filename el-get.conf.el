@@ -10,7 +10,6 @@
           el-get
           rainbow-mode
           google-maps
-          google-weather
           multi-term
           erc-track-score
           markdown-mode
