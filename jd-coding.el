@@ -15,7 +15,6 @@
 
 (defun jd:customize-prog-mode-common ()
   (jd:font-lock-add-hack-keywords)
-  (idle-highlight-mode 1)
   (rainbow-mode 1)
   (rainbow-delimiters-mode 1)
   (setq show-trailing-whitespace t)

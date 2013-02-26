@@ -26,7 +26,6 @@
           php-mode
           cmake-mode
           goto-last-change
-          idle-highlight-mode
           org-mode
           mmm-mode
           clojure-mode
