@@ -26,6 +26,7 @@
           php-mode
           cmake-mode
           goto-last-change
+          git-gutter
           org-mode
           mmm-mode
           clojure-mode
