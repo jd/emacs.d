@@ -39,6 +39,7 @@
         ("Solar" "~/.emacs.d/icons/org/solar.png" nil nil :ascent center)
         ("Reading" "~/.emacs.d/icons/org/book.png" nil nil :ascent center)
         ("OpenStack" "~/.emacs.d/icons/org/openstack.png" nil nil :ascent center)
+        ("Ceilometer" "~/.emacs.d/icons/org/openstack.png" nil nil :ascent center)
         ("\\(Holidays\\|Vacation\\)" "~/.emacs.d/icons/org/holidays.png" nil nil :ascent center)
         (".*" '(space . (:width (16))))))
 (setq org-agenda-files (list org-directory))
