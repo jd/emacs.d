@@ -67,6 +67,20 @@ http://lists.freedesktop.org/mailman/listinfo/\\1"))
 \\1 mailing list
 \\1@lists.debconf.org
 http://lists.debconf.org/mailman/listinfo/\\1"))
+        ("^lists\\.openstack\\.review"
+         (highlight-words .  ((" : \\(FAILURE\\)" 1 1 error)
+                              (" : \\(SUCCESS\\)" 1 1 success)
+                              (" : \\(SKIPPED\\)" 1 1 warning)
+                              ("Patch Set [[:digit:]]+: Looks good to me (core reviewer); Approved" 0 0 success)
+                              ("Patch Set [[:digit:]]+: Looks good to me (core reviewer)" 0 0 success)
+                              ("Patch Set [[:digit:]]+: Looks good to me, but someone else must approve" 0 0 success)
+                              ("Patch Set [[:digit:]]+: Doesn't seem to work" 0 0 error)
+                              ("Patch Set [[:digit:]]+: Do not merge" 0 0 error)
+                              ("Patch Set [[:digit:]]: I would prefer that you didn't merge this" 0 0 error)
+                              ("Patch Set [[:digit:]]+: Works for me" 0 0 success)
+                              ("Patch Set [[:digit:]]+: Verified" 0 0 success)
+                              ("^.+ has uploaded a new change for review." 0 0 bold)
+                              ("Jenkins has submitted this change and it was merged." 0 0 success))))
         ("^lists\\.openstack\\.\\(.+\\)"
          (to-list . "\\1@lists.openstack.org")
          (list-identifier . "\\\\[\\1\\\\]")
