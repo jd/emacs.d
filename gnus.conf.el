@@ -146,8 +146,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))
 (setq gnus-ignored-from-addresses jd:email-addresses-regexp)
 (setq gnus-thread-sort-functions '(gnus-thread-sort-by-number
                                    gnus-thread-sort-by-subject
-                                   gnus-thread-sort-by-date
-                                   gnus-thread-sort-by-total-score))
+                                   gnus-thread-sort-by-date))
 (setq gnus-auto-select-subject 'unread) ; Select unread article on group entering
 (setq gnus-summary-stop-at-end-of-message t)
 (setq gnus-summary-to-prefix "→"
