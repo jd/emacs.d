@@ -1,3 +1,6 @@
+(global-semantic-stickyfunc-mode 1)
+(global-semantic-idle-summary-mode 1)
+
 (eval-after-load "semantic/db"
   '(add-to-list 'semanticdb-project-root-functions
 		(defun jd:semanticdb-is-project-root (directory-name)

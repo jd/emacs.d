@@ -88,6 +88,5 @@ This variable is used in some places.")
 (ffap-bindings)                         ; Use ffap
 (iswitchb-mode 1)
 (browse-kill-ring-default-keybindings)
-(which-func-mode 1)
 
 (org-crypt-use-before-save-magic)

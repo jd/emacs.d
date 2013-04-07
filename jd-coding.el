@@ -32,8 +32,6 @@
 (add-hook 'sgml-mode-hook 'jd:customize-prog-mode-common)
 
 (semantic-mode 1)
-(global-semantic-stickyfunc-mode 1)
-(global-semantic-idle-summary-mode 1)
 
 ;; CC mode
 (c-add-style "jd"
