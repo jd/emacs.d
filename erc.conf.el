@@ -8,6 +8,7 @@
 (setq erc-header-line-format "")        ; XXX workaround emacs bug, %o not recognize wtf
 (setq erc-join-buffer 'bury)
 (setq erc-warn-about-blank-lines nil)
+(setq erc-interpret-mirc-color t)
 
 (setq erc-prompt (lambda ()
                    (if erc-network
