@@ -2,7 +2,6 @@
 (add-to-list 'erc-modules 'match)
 (add-to-list 'erc-modules 'scrolltobottom)
 (add-to-list 'erc-modules 'notifications)
-(add-to-list 'erc-modules 'track-score)
 
 ;; (setq erc-header-line-format "%t: %o")
 (setq erc-header-line-format "")        ; XXX workaround emacs bug, %o not recognize wtf
