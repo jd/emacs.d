@@ -11,7 +11,6 @@
           rainbow-mode
           google-maps
           multi-term
-          erc-track-score
           markdown-mode
           browse-kill-ring
           magit
