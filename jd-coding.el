@@ -81,8 +81,7 @@
 
 (dolist (mode jd:elisp-programming-major-modes)
   (let ((sym (intern (concat (symbol-name mode) "-hook"))))
-    (add-hook sym 'turn-on-eldoc-mode)
-    (add-hook sym 'enable-paredit-mode)))
+    (add-hook sym 'turn-on-eldoc-mode)))
 
 ;; lisp
 (add-hook 'lisp-mode-hook (defun jd:turn-on-slime-mode ()
