@@ -11,6 +11,7 @@
           rainbow-mode
           google-maps
           multi-term
+          hy-mode
           markdown-mode
           browse-kill-ring
           magit
