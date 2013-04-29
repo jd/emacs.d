@@ -3,12 +3,6 @@
 (add-to-list 'erc-modules 'scrolltobottom)
 (add-to-list 'erc-modules 'notifications)
 
-(defadvice erc-display-line
-  (after jd:erc-display-line-scroll-to-bottom (string &optional buffer)
-         activate protect)
-  (with-current-buffer (or buffer (current-buffer))
-    (erc-scroll-to-bottom)))
-
 ;; (setq erc-header-line-format "%t: %o")
 (setq erc-header-line-format "")        ; XXX workaround emacs bug, %o not recognize wtf
 (setq erc-join-buffer 'bury)
