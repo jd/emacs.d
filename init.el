@@ -89,3 +89,4 @@ This variable is used in some places.")
 (browse-kill-ring-default-keybindings)
 
 (org-crypt-use-before-save-magic)
+(auto-dim-other-buffers-mode)

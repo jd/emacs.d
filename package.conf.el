@@ -11,6 +11,7 @@
 		   google-maps
 		   multi-term
 		   hy-mode
+                   auto-dim-other-buffers
 		   markdown-mode
 		   gnuplot-mode
 		   magit
