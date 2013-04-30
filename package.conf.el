@@ -10,7 +10,7 @@
 		   rainbow-mode
 		   google-maps
 		   multi-term
-		   ;; hy-mode
+		   hy-mode
 		   markdown-mode
 		   gnuplot-mode
 		   magit
