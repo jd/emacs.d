@@ -3,7 +3,7 @@
 
 ;; Expand load-path
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get") ; Load el-get
+;; (add-to-list 'load-path "~/.emacs.d/el-get/el-get") ; Load el-get
 
 ;; Generate autoloads
 (let ((generated-autoload-file "~/.emacs.d/jd-autoloads.el"))
@@ -30,14 +30,13 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+;; Install packages
+(require 'package)
 
 (defvar jd:projects-directory (expand-file-name "~/Work/src")
   "Where I store my projects.
 This variable is used in some places.")
 
-
-;; Require el-get to install packages
-(require 'el-get)
 
 (require 'jd-keybindings)
 (require 'jd-daemon)
