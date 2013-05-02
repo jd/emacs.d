@@ -14,8 +14,10 @@
 (setq gnus-summary-line-format
       (concat "%z%U%R %~(max-right 17)~(pad-right 17)&user-date;  "
               "%~(max-right 20)~(pad-right 20)f %B%s\n"))
-(setq gnus-message-archive-group 'identity)
-(setq gnus-message-archive-method "")
+;; TODO this is needed because the group passed to
+;; `gnus-message-archive-group' is not fully qualified, which sucks, and I
+;; should fix it sometime
+(setq gnus-message-archive-group (lambda (group) (concat "nnimap+Naquadah:" group)))
 ;; Expire
 (setq gnus-total-expirable-newsgroups
       (concat "^\\("
