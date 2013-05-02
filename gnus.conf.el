@@ -14,7 +14,8 @@
 (setq gnus-summary-line-format
       (concat "%z%U%R %~(max-right 17)~(pad-right 17)&user-date;  "
               "%~(max-right 20)~(pad-right 20)f %B%s\n"))
-(setq gnus-message-archive-group "nnimap+Naquadah:sent")
+(setq gnus-message-archive-group 'identity)
+(setq gnus-message-archive-method "")
 ;; Expire
 (setq gnus-total-expirable-newsgroups
       (concat "^\\("
@@ -27,8 +28,7 @@
 
 (setq gnus-parameters
       '(("^lists\\."
-         (subscribed . t)
-         (gnus-message-archive-group . "nnimap+Naquadah:sent"))
+         (subscribed . t))
         ("^lists\\.ding"
          (to-list . "ding@gnus.org"))
         ("^lists\\.awesome\\(-devel\\)?"
@@ -95,9 +95,7 @@ http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
          (banner . "_______________________________________________
 \\1 mailing list
 \\1@lists.alioth.debian.org
-http://lists.alioth.debian.org/mailman/listinfo/\\1"))
-        ("^INBOX"
-         (gcc-self . t))))
+http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
 
 ;; gnus-start
 (setq gnus-subscribe-newsgroup-method 'gnus-subscribe-alphabetically)
