@@ -3,7 +3,7 @@
 (add-to-list 'erc-modules 'scrolltobottom)
 (add-to-list 'erc-modules 'notifications)
 
-;; (setq erc-header-line-format "%t: %o")
+(setq erc-header-line-format "%t: %o")
 (setq erc-header-line-format "")        ; XXX workaround emacs bug, %o not recognize wtf
 (setq erc-join-buffer 'bury)
 (setq erc-warn-about-blank-lines nil)
