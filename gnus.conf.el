@@ -17,7 +17,8 @@
 ;; TODO this is needed because the group passed to
 ;; `gnus-message-archive-group' is not fully qualified, which sucks, and I
 ;; should fix it sometime
-(setq gnus-message-archive-group (lambda (group) (concat "nnimap+Naquadah:" group)))
+(setq gnus-message-archive-group (lambda (group) (concat "nnimap+Naquadah:"
+                                                         (if (string= group "") "INBOX" group))))
 ;; Expire
 (setq gnus-total-expirable-newsgroups
       (concat "^\\("
