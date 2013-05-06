@@ -3,7 +3,12 @@
 
 ;; Expand load-path
 (add-to-list 'load-path "~/.emacs.d")
-;; (add-to-list 'load-path "~/.emacs.d/el-get/el-get") ; Load el-get
+
+;; Add development directory for some project
+(dolist (dir '("~/Work/src/gnus"
+               "~/Work/src/naquadah-theme"))
+  (when (file-exists-p dir)
+    (add-to-list 'load-path dir)))
 
 ;; Generate autoloads
 (let ((generated-autoload-file "~/.emacs.d/jd-autoloads.el"))
