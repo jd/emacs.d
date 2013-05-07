@@ -5,7 +5,7 @@
 (add-to-list 'load-path "~/.emacs.d")
 
 ;; Add development directory for some project
-(dolist (dir '("~/Work/src/gnus"
+(dolist (dir '("~/Work/src/gnus/lisp"
                "~/Work/src/naquadah-theme"))
   (when (file-exists-p dir)
     (add-to-list 'load-path dir)))
