@@ -88,4 +88,6 @@
                             (slime-mode 1)
                             (slime-autodoc-mode 1)))
 
+(slime-setup '(slime-fancy slime-autodoc slime-indentation slime-annot))
+
 (provide 'jd-coding)
