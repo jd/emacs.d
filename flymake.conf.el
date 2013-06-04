@@ -1,4 +1,4 @@
-(defun flymake-pyflakes-init ()
+(defun flymake-flake-init ()
   (let* ((temp-file (flymake-init-create-temp-buffer-copy
                      'flymake-create-temp-inplace))
          (local-file (file-relative-name
@@ -7,7 +7,7 @@
     `("flake8" (,local-file))))
 
 (add-to-list 'flymake-allowed-file-name-masks
-             '("\\.py\\'" flymake-pyflakes-init))
+             '("\\.py\\'" flymake-flake-init))
 
 (defvar jd:flymake-display-error-message-timer
   (run-with-idle-timer 1 t 'jd:flymake-display-err-for-current-line))
