@@ -7,6 +7,7 @@
 		   oauth2		; Should be a dep of google-stuff
 		   browse-kill-ring
 		   go-mode
+                   gnuplot
 		   rainbow-mode
 		   google-maps
 		   multi-term
