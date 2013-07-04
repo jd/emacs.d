@@ -95,3 +95,5 @@ This variable is used in some places.")
 
 (org-crypt-use-before-save-magic)
 (auto-dim-other-buffers-mode)
+(bbdb-initialize 'gnus 'message)
+(bbdb-mua-auto-update-init 'gnus 'message)

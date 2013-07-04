@@ -8,6 +8,7 @@
 		   browse-kill-ring
 		   go-mode
                    gnuplot
+                   bbdb
 		   rainbow-mode
 		   google-maps
 		   multi-term
