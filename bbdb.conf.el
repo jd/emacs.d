@@ -1,3 +1,12 @@
 (setq bbdb-file (concat user-emacs-directory "bbdb"))
 (setq bbdb-update-records-p 'create)
 (setq bbdb-mua-pop-up nil)
+(setq bbdb-silent t)
+(setq bbdb-user-mail-address-re jd:email-addresses)
+(setq bbdb-add-name t)
+(setq bbdb-add-aka t)
+(setq bbdb-add-mails t)
+(setq bbdb-new-mails-primary t)
+(setq bbdb-ignore-message-alist
+      '(("From" . "mailer-daemon")
+        (("To" "From") . "review@openstack.org")))
