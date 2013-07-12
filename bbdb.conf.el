@@ -9,4 +9,5 @@
 (setq bbdb-new-mails-primary t)
 (setq bbdb-ignore-message-alist
       '(("From" . "mailer-daemon")
+        ("From" . "bugs.launchpad.net")
         (("To" "From") . "review@openstack.org")))
