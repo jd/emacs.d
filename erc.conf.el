@@ -8,6 +8,8 @@
 (setq erc-warn-about-blank-lines nil)
 (setq erc-interpret-mirc-color t)
 
+(setq erc-server-reconnect-attempts t)
+
 (setq erc-prompt (lambda ()
                    (if erc-network
                        (concat "[" (symbol-name erc-network) "]")
