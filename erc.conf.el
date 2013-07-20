@@ -9,6 +9,7 @@
 (setq erc-interpret-mirc-color t)
 
 (setq erc-server-reconnect-attempts t)
+(setq erc-server-reconnect-timeout 10)
 
 (setq erc-prompt (lambda ()
                    (if erc-network
