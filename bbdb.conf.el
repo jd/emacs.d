@@ -11,4 +11,5 @@
       '(("From" . "mailer-daemon")
         ("From" . "bugs.launchpad.net")
         ("From" . "postmaster.twitter.com")
+        ("From" . "plus.google.com)
         (("To" "From") . "review@openstack.org")))
