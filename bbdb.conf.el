@@ -10,4 +10,5 @@
 (setq bbdb-ignore-message-alist
       '(("From" . "mailer-daemon")
         ("From" . "bugs.launchpad.net")
+        ("From" . "postmaster.twitter.com")
         (("To" "From") . "review@openstack.org")))
