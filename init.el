@@ -5,8 +5,8 @@
 (add-to-list 'load-path "~/.emacs.d")
 
 ;; Add development directory for some project
-(dolist (dir '("~/Work/src/gnus/lisp"
-               "~/Work/src/naquadah-theme"))
+(dolist (dir '("~/Source/gnus/lisp"
+               "~/Source/naquadah-theme"))
   (when (file-exists-p dir)
     (add-to-list 'load-path dir)))
 
@@ -38,7 +38,7 @@
 ;; Install packages
 (require 'package)
 
-(defvar jd:projects-directory (expand-file-name "~/Work/src")
+(defvar jd:projects-directory (expand-file-name "~/Source")
   "Where I store my projects.
 This variable is used in some places.")
 
@@ -70,7 +70,7 @@ This variable is used in some places.")
 (setq next-screen-context-lines 5)      ; I want to keep more lines when
                                         ; switching pages
 (setq use-dialog-box nil)               ; Seriously…
-(setq source-directory "~/Work/src/emacs/src")
+(setq source-directory "~/Source/emacs/src")
 (put 'narrow-to-region 'disabled nil)
 (set-default 'indent-tabs-mode nil)    ; always use spaces to indent, no tab
 
