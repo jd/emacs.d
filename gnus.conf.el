@@ -58,8 +58,8 @@ http://lists.freedesktop.org/mailman/listinfo/\\1"))
          (to-list . "\\1@ornix.org"))
         ("^lists\\.\\(muse-el-.*\\)"
          (to-list . "\\1@gna.org"))
-        ("^lists\\.camlistore"
-         (to-list . "camlistore@googlegroups.com"))
+        ("^lists\\.googlegroups\\.\\(.+\\)"
+         (to-list . "\\1@googlegroups.com"))
         ("^lists\\.gnu\\.\\(.+\\)"
          (to-list . "\\1@gnu.org"))
         ("^lists\\.el-get-devel"
