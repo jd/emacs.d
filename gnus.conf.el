@@ -62,6 +62,8 @@ http://lists.freedesktop.org/mailman/listinfo/\\1"))
          (to-list . "\\1@googlegroups.com"))
         ("^lists\\.gnu\\.\\(.+\\)"
          (to-list . "\\1@gnu.org"))
+        ("^lists\\.common-lisp\\.\\(.+\\)"
+         (to-list . "\\1@common-lisp.net"))
         ("^lists\\.el-get-devel"
          (to-list . "el-get-devel@tapoueh.org"))
         ("^lists\\.debconf\\.\\(.+\\)"
