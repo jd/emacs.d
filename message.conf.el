@@ -13,6 +13,7 @@
 (setq message-elide-ellipsis "\n[…]\n\n")
 (setq message-citation-line-function 'message-insert-formatted-citation-line)
 (add-hook 'message-mode-hook 'footnote-mode)
+(add-hook 'message-mode-hook 'turn-on-flyspell)
 (setq message-subscribed-address-functions '(gnus-find-subscribed-addresses))
 
 (defvar jd:message-signatures
