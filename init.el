@@ -85,6 +85,7 @@ This variable is used in some places.")
 (line-number-mode 1)			; Show line number
 (column-number-mode 1)			; Show colum number
 (global-hl-line-mode 1)			; Highlight the current line
+(global-auto-revert-mode 1)
 (windmove-default-keybindings)	      ; Move between frames with Shift+arrow
 (show-paren-mode t)
 (mouse-avoidance-mode 'animate)         ; Move the mouse away
