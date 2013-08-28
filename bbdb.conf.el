@@ -7,6 +7,7 @@
 (setq bbdb-add-aka t)
 (setq bbdb-add-mails t)
 (setq bbdb-new-mails-primary t)
+(setq bbdb-complete-mail-allow-cycling t)
 (setq bbdb-ignore-message-alist
       '(("From" . "mailer-daemon")
         ("From" . "bugs.launchpad.net")
