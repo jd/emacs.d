@@ -14,3 +14,4 @@
         ("From" . "postmaster.twitter.com")
         ("From" . "plus.google.com")
         (("To" "From") . "review@openstack.org")))
+(setq bbdb-allow-duplicates t)
