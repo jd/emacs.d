@@ -13,5 +13,6 @@
         ("From" . "bugs.launchpad.net")
         ("From" . "postmaster.twitter.com")
         ("From" . "plus.google.com")
+        ("From" . "notify@twitter.com")
         (("To" "From") . "review@openstack.org")))
 (setq bbdb-allow-duplicates t)
