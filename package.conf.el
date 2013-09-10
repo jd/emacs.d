@@ -8,6 +8,7 @@
 		   browse-kill-ring
                    adoc-mode
 		   go-mode
+                   puppet-mode
                    gnuplot
                    bbdb
 		   rainbow-mode
