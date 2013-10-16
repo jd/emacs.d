@@ -12,14 +12,14 @@ Put each name on a line."
 
 (defun jd:erc-read-file (file)
   (when (file-exists-p file)
-    (regexp-opt
-     (remove-if
-      (lambda (str) (string= str ""))
-      (split-string
-       (with-temp-buffer
-         (insert-file-contents-literally file)
-         (buffer-string))
-       "\n")))))
+    (list (regexp-opt
+           (remove-if
+            (lambda (str) (string= str ""))
+            (split-string
+             (with-temp-buffer
+               (insert-file-contents-literally file)
+               (buffer-string))
+             "\n"))))))
 
 (setq erc-pals (jd:erc-read-file jd:erc-pals-file))
 (setq erc-fools (jd:erc-read-file jd:erc-fools-file))
