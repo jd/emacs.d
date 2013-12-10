@@ -80,8 +80,10 @@ This variable is used in some places.")
 (savehist-mode 1)
 (blink-cursor-mode 1)			; blink!
 (delete-selection-mode 1)		; Transient mark can delete/replace
-(set-scroll-bar-mode 'right)		; Scrollbar on the right
-(scroll-bar-mode -1)			; But no scrollbar
+(when (fboundp 'set-scroll-bar-mode)
+  (set-scroll-bar-mode 'right))		; Scrollbar on the right
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))			; But no scrollbar
 (line-number-mode 1)			; Show line number
 (column-number-mode 1)			; Show colum number
 (global-hl-line-mode 1)			; Highlight the current line
