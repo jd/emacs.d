@@ -59,7 +59,7 @@ This variable is used in some places.")
 
 ;; C source code
 (setq frame-title-format '("" invocation-name ": %b"))
-(set-frame-font "Monaco-12")
+(set-frame-font "Inconsolata")
 (setq ns-right-alternate-modifier nil)  ; Do not use the right Option as
                                         ; meta, rather use it for
                                         ; composition
