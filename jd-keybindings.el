@@ -34,11 +34,11 @@
 
 (global-set-key "\C-x\C-b" 'ibuffer)
 
-(global-set-key [f12] (lambda ()
-                        (interactive)
-                        (if (gnus-alive-p)
-                            (switch-to-buffer gnus-group-buffer)
-                          (gnus))))
+(global-set-key [s-f12] (lambda ()
+                          (interactive)
+                          (if (gnus-alive-p)
+                              (switch-to-buffer gnus-group-buffer)
+                            (gnus))))
 
 (global-set-key "\M-/" 'hippie-expand)
 
