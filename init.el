@@ -59,6 +59,7 @@ This variable is used in some places.")
 
 ;; C source code
 (setq frame-title-format '("" invocation-name ": %b"))
+(set-frame-font "Monaco-12")
 (tool-bar-mode -1)			; Kill the toolbar
 (menu-bar-mode -1)                      ; Kill the menu bar
 (setq scroll-step 1)
