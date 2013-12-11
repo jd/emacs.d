@@ -259,9 +259,3 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
                                                         (message .5 point)
                                                         (article 1.0))
                                             (summary .2))))
-
-;; No cursor
-(defun jd:no-cursor ()
-  (setq cursor-type nil))
-(add-hook 'gnus-summary-mode-hook 'jd:no-cursor)
-(add-hook 'gnus-group-mode-hook 'jd:no-cursor)
