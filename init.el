@@ -59,12 +59,18 @@ This variable is used in some places.")
 
 ;; C source code
 (setq frame-title-format '("" invocation-name ": %b"))
-(set-frame-font "Inconsolata")
+(set-frame-font "DejaVu Sans Mono-12")
+;; (set-fontset-font t 'unicode (font-spec :family "Droid Sans"))
+(if (string-equal system-type "darwin")
+    ;; (set-fontset-font "fontset-default"
+    ;;                   'unicode
+    ;;                   '("Menlo" . "iso10646-1"))
+    nil
+  (menu-bar-mode -1))                   ; Kill the menu bar
 (setq ns-right-alternate-modifier nil)  ; Do not use the right Option as
                                         ; meta, rather use it for
                                         ; composition
 (tool-bar-mode -1)			; Kill the toolbar
-(menu-bar-mode -1)                      ; Kill the menu bar
 (setq scroll-step 1)
 (setq visible-bell t)
 (setq-default fill-column 76)
