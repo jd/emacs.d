@@ -19,6 +19,12 @@
                   (let ((default-directory "~/.emacs.d/"))
                     (call-interactively 'find-file))))
 
+(global-set-key "\C-ccn"
+                (defun jd:edit-notes ()
+                  "Edit my note file"
+                  (interactive)
+                  (find-file (concat org-directory "/notes.org"))))
+
 (global-set-key [f11]
                 (defun jd:set-frame-maximized ()
                   (interactive)
