@@ -96,6 +96,8 @@ http://lists.debconf.org/mailman/listinfo/\\1"))
 \\1 mailing list
 \\1@lists.openstack.org
 http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
+        ("^lists\\.openstack-fr\\.\\(.+\\)"
+         (to-list . "\\1@listes.openstack.fr"))
         ("^lists\\.debian\\.alioth\\.\\(.+\\)"
          (to-list . "\\1@lists.alioth.debian.org")
          (list-identifier . "\\\\[\\1\\\\]")
