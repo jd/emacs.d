@@ -4,6 +4,7 @@
     "jdanjou@freedesktop\\.org"
     "jdanjou\\(\\+.+\\)?@ornix\\.org"
     "jdanjou@gmail\\.com"
+    "julien\\.danjou@enovance\\.com"
     "jd\\(\\+.+\\)?@naquadah.org")
   "Regexp of my email addreses.")
 
