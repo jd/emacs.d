@@ -17,15 +17,15 @@
 (setq message-subscribed-address-functions '(gnus-find-subscribed-addresses))
 
 (defvar jd:message-signatures
-  '("/* Free Software hacker * independent consultant
+  '("/* Free Software hacker
    http://julien.danjou.info */"
-    "# Free Software hacker # independent consultant
+    "# Free Software hacker
 # http://julien.danjou.info"
-        "// Free Software hacker / independent consultant
+        "// Free Software hacker
 // http://julien.danjou.info"
-        ";; Free Software hacker ; independent consultant
+        ";; Free Software hacker
 ;; http://julien.danjou.info"
-        "-- Free Software hacker - independent consultant
+        "-- Free Software hacker
 -- http://julien.danjou.info")
   "Random signatures to pick.")
 
