@@ -34,3 +34,32 @@
           (defun jd:fix-scrolling-bug ()
             "See http://debbugs.gnu.org/cgi/bugreport.cgi?bug=11697"
             (set (make-local-variable 'scroll-conservatively) 1000)))
+
+(defun erc-generate-new-buffer-name (server port target &optional proc)
+  "Create a new buffer name based on the arguments."
+  (let ((buf-name
+	 (if target
+	     (concat target
+                     (when erc-network
+                       (concat "@" (symbol-name erc-network))))
+	   (concat server ":"
+		   (if (numberp port)
+		       (number-to-string port)
+		     port)))))
+    (if erc-reuse-buffers
+	(let ((buf (get-buffer buf-name)))
+	  (if buf
+	      (with-current-buffer buf
+		;; Check that the server/port is the same
+		(if (and (string= erc-session-server server)
+			 (erc-port-equal erc-session-port port)
+			 ;; If this is for a target, we're good, if it's a
+			 ;; server we need to check it's dead
+			 (or target
+			     (and
+			      (erc-server-buffer-p)
+			      (not (erc-server-process-alive)))))
+		    buf-name
+                  (generate-new-buffer-name buf-name)))
+	    buf-name))
+      (generate-new-buffer-name buf-name))))
