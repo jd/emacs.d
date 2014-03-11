@@ -1,3 +1,5 @@
+(setq flymake-gui-warnings-enabled nil) ; STFU
+
 (defun flymake-flake-init ()
   (let* ((temp-file (flymake-init-create-temp-buffer-copy
                      'flymake-create-temp-inplace))
