@@ -6,10 +6,6 @@
   (erc-tls
    :server "prometheus.naquadah.org"
    :port 6666
-   :nick "jd/bitlbee")
-  (erc-tls
-   :server "prometheus.naquadah.org"
-   :port 6666
    :nick "jd/oftc")
   (erc-tls
    :server "prometheus.naquadah.org"
