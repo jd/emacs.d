@@ -188,6 +188,9 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
       '((".*"
          (name "Julien Danjou")
          (address "julien@danjou.info"))
+        ("enovance"
+         (address "jd@enovance.com")
+         (organization "eNovance"))
         ("debian"
          (address "acid@debian.org")
          (organization "Debian"))
