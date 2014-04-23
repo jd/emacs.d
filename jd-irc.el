@@ -14,11 +14,7 @@
   (erc-tls
    :server "prometheus.naquadah.org"
    :port 6666
-   :nick "jd/lost-oasis")
-  (erc-tls
-   :server "prometheus.naquadah.org"
-   :port 6666
-   :nick "jd/cloudwatt"))
+   :nick "jd/lost-oasis"))
 
 (defun jd:erc-stop ()
   "Disconnect from IRC servers."
