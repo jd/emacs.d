@@ -33,6 +33,8 @@
 		   clojure-mode
 		   slime
 		   jinja2-mode
-		   git-commit-mode))
+		   git-commit-mode
+                   flycheck-mode
+                   ))
   (unless (package-installed-p package)
     (package-install package)))
