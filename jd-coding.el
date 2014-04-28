@@ -22,7 +22,7 @@
 
 (defun jd:customize-programming-language-mode ()
   (jd:customize-prog-mode-common)
-  (flymake-mode 1))
+  (flycheck-mode 1))
 
 (dolist (mode jd:programming-language-major-modes)
   (add-hook
