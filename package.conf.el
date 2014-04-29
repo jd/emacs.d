@@ -34,7 +34,7 @@
 		   slime
 		   jinja2-mode
 		   git-commit-mode
-                   flycheck-mode
+                   flycheck
                    ))
   (unless (package-installed-p package)
     (package-install package)))
