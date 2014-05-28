@@ -31,7 +31,8 @@
 
 (add-hook 'sgml-mode-hook 'jd:customize-prog-mode-common)
 
-(semantic-mode 1)
+;; Fucking slow down everything
+;; (semantic-mode 1)
 
 ;; CC mode
 (c-add-style "jd"
