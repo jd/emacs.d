@@ -29,3 +29,5 @@
 
 (define-key gnus-summary-mode-map "\\" 'jd:gnus-article-browse-review-or-bug)
 (define-key gnus-article-mode-map "\\" 'jd:gnus-article-browse-review-or-bug)
+
+(setq gnus-article-browse-delete-temp t)
