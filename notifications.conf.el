@@ -17,8 +17,9 @@
           (body (plist-get params :body)))
       (start-process "terminal-notifier" nil
                      "terminal-notifier"
+                     "-contentImage" (or (plist-get params :image-path) "")
+                     "-appIcon" (or (plist-get params :app-icon) "")
                      "-message" (jd:xml-unescape-string body)
                      "-title" (jd:xml-unescape-string title)
                      "-activate" "org.gnu.Emacs"
                      "-sender" "org.gnu.Emacs"))))
-
