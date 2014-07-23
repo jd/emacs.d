@@ -7,6 +7,7 @@
 		   oauth2		; Should be a dep of google-stuff
 		   browse-kill-ring
                    adoc-mode
+                   powerline
 		   go-mode
                    puppet-mode
                    gnuplot

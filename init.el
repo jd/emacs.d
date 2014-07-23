@@ -57,6 +57,8 @@ This variable is used in some places.")
 (require 'google-contacts-message)
 (require 'google-contacts-gnus)
 
+(powerline-default-theme)
+
 ;; C source code
 (setq frame-title-format '("" invocation-name ": %b"))
 (set-frame-font "DejaVu Sans Mono-12")
