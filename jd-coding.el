@@ -31,6 +31,8 @@
 
 (add-hook 'sgml-mode-hook 'jd:customize-prog-mode-common)
 
+(add-hook 'python-mode-hook 'fci-mode)
+
 ;; Fucking slow down everything
 ;; (semantic-mode 1)
 

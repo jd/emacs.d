@@ -6,6 +6,7 @@
 (dolist (package '(naquadah-theme
 		   oauth2		; Should be a dep of google-stuff
 		   browse-kill-ring
+                   fill-column-indicator
                    adoc-mode
                    powerline
 		   go-mode

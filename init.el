@@ -75,7 +75,7 @@ This variable is used in some places.")
 (tool-bar-mode -1)			; Kill the toolbar
 (setq scroll-step 1)
 (setq visible-bell t)
-(setq-default fill-column 76)
+(setq-default fill-column 80)
 (setq user-full-name "Julien Danjou")
 (defalias 'yes-or-no-p 'y-or-n-p)
 (set-default 'indicate-buffer-boundaries '((up . nil) (down . nil) (t . left)))
