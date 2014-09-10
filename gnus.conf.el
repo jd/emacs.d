@@ -7,6 +7,10 @@
                                   (nnimap-address "mail.naquadah.org")
                                   (nnimap-stream ssl)))
 
+(setq gnus-secondary-select-methods '((nnimap "Red Hat"
+                                              (nnimap-address "mail.corp.redhat.com")
+                                              (nnimap-stream ssl))))
+
 (setq gnus-novice-user nil)             ; I AM NOT!
 (setq gnus-spam-process-destinations
       '(("." "spam")))
@@ -199,6 +203,10 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
       '((".*"
          (name "Julien Danjou")
          (address "julien@danjou.info"))
+        ("Red Hat:"
+         (name "Julien Danjou")
+         (address "jdanjou@redhat.com")
+         (organization "Red Hat"))
         ("enovance"
          (address "jd@enovance.com")
          (organization "eNovance"))
