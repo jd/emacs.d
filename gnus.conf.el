@@ -5,7 +5,7 @@
 ;; gnus
 (setq gnus-select-method '(nnimap "Naquadah"
                                   (nnimap-address "mail.naquadah.org")
-                                  (nnimap-stream ssl)))
+                                  (nnimap-stream starttls)))
 
 (setq gnus-secondary-select-methods '((nnimap "Red Hat"
                                               (nnimap-address "mail.corp.redhat.com")
