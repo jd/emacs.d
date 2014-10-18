@@ -67,7 +67,9 @@ This variable is used in some places.")
     ;; (set-fontset-font "fontset-default"
     ;;                   'unicode
     ;;                   '("Menlo" . "iso10646-1"))
-    nil
+    (progn
+      (add-to-list 'exec-path "/usr/local/bin")
+      (add-to-list 'exec-path "/usr/local/sbin"))
   (menu-bar-mode -1))                   ; Kill the menu bar
 (setq ns-right-alternate-modifier nil)  ; Do not use the right Option as
                                         ; meta, rather use it for
