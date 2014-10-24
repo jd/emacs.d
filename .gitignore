@@ -1,4 +1,4 @@
-jd-autoloads.el
+lisp/jd-autoloads.el
 saveplace
 oauth2.plstore
 backups

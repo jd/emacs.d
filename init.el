@@ -2,7 +2,7 @@
 ;; Written since 2009!
 
 ;; Expand load-path
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; Add development directory for some project
 (dolist (dir '("~/Source/gnus/lisp"
@@ -11,8 +11,8 @@
     (add-to-list 'load-path dir)))
 
 ;; Generate autoloads
-(let ((generated-autoload-file "~/.emacs.d/jd-autoloads.el"))
-  (update-directory-autoloads "~/.emacs.d")
+(let ((generated-autoload-file "~/.emacs.d/lisp/jd-autoloads.el"))
+  (update-directory-autoloads "~/.emacs.d/lisp")
   (load generated-autoload-file)
   (let ((buf (get-file-buffer generated-autoload-file)))
     (when buf (kill-buffer buf))))
