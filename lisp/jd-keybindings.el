@@ -81,6 +81,4 @@
 
 (global-set-key (kbd "C-x C-/") 'goto-last-change)
 
-(global-set-key (kbd "M-g M-v") 'flymake-display-err-menu-for-current-line)
-
 (provide 'jd-keybindings)
