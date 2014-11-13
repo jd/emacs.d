@@ -15,7 +15,7 @@
   (defun notifications-notify (&rest params)
     (let ((title (plist-get params :title))
           (body (plist-get params :body)))
-      (start-process "terminal-notifier" nil
+      (call-process "terminal-notifier" nil nil nil
                      "terminal-notifier"
                      "-contentImage" (or (plist-get params :image-path) "")
                      "-appIcon" (or (plist-get params :app-icon) "")
