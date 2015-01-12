@@ -104,7 +104,6 @@ This variable is used in some places.")
 (windmove-default-keybindings)	      ; Move between frames with Shift+arrow
 (show-paren-mode t)
 (mouse-avoidance-mode 'animate)         ; Move the mouse away
-(iswitchb-mode 1)
 (browse-kill-ring-default-keybindings)
 (ido-mode 1)
 

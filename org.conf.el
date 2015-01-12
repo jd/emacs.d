@@ -3,7 +3,7 @@
 (setq org-hide-leading-stars t)
 (setq org-src-fontify-natively t)
 (setq org-startup-indented t)
-(setq org-completion-use-iswitchb t)
+(setq org-completion-use-ido t)
 (setq org-log-done t)
 (setq org-email-link-description-format "Email %c (%d): %s")
 (setq org-link-frame-setup

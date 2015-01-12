@@ -63,7 +63,7 @@
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cb" 'org-switchb)
 (global-set-key "\C-cL" 'org-insert-link-global)
 (global-set-key "\C-co" 'org-open-at-point-global)
 (global-set-key (kbd "<f10>") 'org-agenda-list)
@@ -74,10 +74,6 @@
 (global-set-key (kbd "C-c d v") 'jd:debian-view-changelog)
 (global-set-key (kbd "C-c d V") 'jd:debian-view-online-changelog)
 (global-set-key (kbd "C-c d b") 'gnus-read-ephemeral-debian-bug-group)
-
-;; (global-set-key (kbd "S-s-<f12>") 'jd:irc)
-
-(global-set-key "\C-cis" 'erc-iswitchb)
 
 (global-set-key (kbd "C-x C-/") 'goto-last-change)
 
