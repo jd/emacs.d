@@ -5,4 +5,4 @@
 (setq magit-save-some-buffers nil)
 
 ;; Remove stashes from the status buffer
-(delq 'magit-insert-stashes 'magit-status-sections-hook)
+(setq magit-status-sections-hook (delq 'magit-insert-stashes magit-status-sections-hook))
