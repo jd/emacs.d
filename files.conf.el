@@ -4,3 +4,6 @@
 (setq delete-old-versions t)
 (setq backup-by-copying t)
 (setq version-control t)
+;; Autosave out of my way
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
