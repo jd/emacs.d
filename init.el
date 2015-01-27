@@ -108,6 +108,5 @@ This variable is used in some places.")
 (ido-mode 1)
 
 (org-crypt-use-before-save-magic)
-(auto-dim-other-buffers-mode)
 (bbdb-initialize 'gnus 'message)
 (bbdb-mua-auto-update-init 'gnus 'message)
