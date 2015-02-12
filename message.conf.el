@@ -31,4 +31,9 @@
 
 (setq message-signature '(concat "Julien Danjou\n" (nth (random (length jd:message-signatures)) jd:message-signatures)))
 
-(setq message-send-mail-function 'message-smtpmail-send-it)
+(setq message-send-mail-function
+      (defun jd:message-smtpmail-send-it ()
+        (if (string-match-p "redhat.com" (message-field-value "From"))
+            (let ((smtpmail-smtp-server "smtp.corp.redhat.com"))
+              (message-smtpmail-send-it))
+          (message-smtpmail-send-it))))
