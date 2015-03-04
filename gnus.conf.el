@@ -4,8 +4,8 @@
 
 ;; gnus
 (setq gnus-select-method '(nnimap "Naquadah"
-                                  (nnimap-address "mail.naquadah.org")
-                                  (nnimap-stream starttls)))
+                                  (nnimap-stream shell)
+                                  (nnimap-shell-program "~/.local/bin/dovecot-imap")))
 
 (setq gnus-secondary-select-methods '((nnimap "Red Hat"
                                               (nnimap-address "mail.corp.redhat.com")
