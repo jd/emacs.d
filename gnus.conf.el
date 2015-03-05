@@ -3,13 +3,17 @@
 (require 'spam)
 
 ;; gnus
-(setq gnus-select-method '(nnimap "Naquadah"
-                                  (nnimap-stream shell)
-                                  (nnimap-shell-program "/usr/local/opt/dovecot/libexec/dovecot/imap")))
+(setq gnus-select-method
+      '(nnimap "Naquadah"
+               (nnimap-stream shell)
+               (nnimap-shell-program
+                "/usr/local/opt/dovecot/libexec/dovecot/imap -o mail_location=maildir:~/Mail")))
 
-(setq gnus-secondary-select-methods '((nnimap "Red Hat"
-                                              (nnimap-address "mail.corp.redhat.com")
-                                              (nnimap-stream ssl))))
+(setq gnus-secondary-select-methods
+      '((nnimap "Red Hat"
+                (nnimap-stream shell)
+                (nnimap-shell-program
+                 "/usr/local/opt/dovecot/libexec/dovecot/imap -o 'mail_location=maildir:~/Mail/Red Hat'"))))
 
 (setq gnus-novice-user nil)             ; I AM NOT!
 (setq gnus-spam-process-destinations
