@@ -143,6 +143,19 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
           (defun jd:gnus-sort-groups-after-new-news ()
             (gnus-group-sort-groups gnus-group-sort-function)))
 
+(defvar *mbsync-process* nil)
+
+(add-hook 'gnus-get-new-news-hook
+          (defun jd:run-mbsync ()
+            (unless (process-live-p *mbsync-process*)
+              (setq *mbsync-process* (start-process "mbsync"
+                                                    (with-current-buffer
+                                                        (get-buffer-create "*mbsync*")
+                                                      (erase-buffer)
+                                                      (current-buffer))
+                                                    "mbsync"
+                                                    "-a")))))
+
 ;; gnus-group
 ;; Redefine this to nil because I pressed it by mistake too many times
 (define-key gnus-group-mode-map (kbd "M-c") nil)
