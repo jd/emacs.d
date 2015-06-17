@@ -12,6 +12,11 @@
           (replace-match (cdr substitution) t t nil)))
       (buffer-string)))
 
+  (require 's)
+
+  (defun jd:escape-term-chars (string)
+    (s-replace-all '(("[" . "\\\\[")) "[foobar]"))
+
   (defun notifications-notify (&rest params)
     (let ((title (plist-get params :title))
           (body (plist-get params :body)))
@@ -19,7 +24,11 @@
                     "terminal-notifier"
                     "-contentImage" (or (plist-get params :image-path) "")
                     "-appIcon" (or (plist-get params :app-icon) "")
-                    "-message" (if body (jd:xml-unescape-string body) "")
-                    "-title" (if title (jd:xml-unescape-string title) "")
+                    "-message" (if body
+                                   (jd:escape-term-chars (jd:xml-unescape-string body))
+                                 "")
+                    "-title" (if title
+                                 (jd:escape-term-chars (jd:xml-unescape-string title))
+                               "")
                     "-activate" "org.gnu.Emacs"
                     "-sender" "org.gnu.Emacs"))))
