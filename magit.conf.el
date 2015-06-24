@@ -6,3 +6,4 @@
 
 ;; Remove stashes from the status buffer
 (setq magit-status-sections-hook (delq 'magit-insert-stashes magit-status-sections-hook))
+(setq magit-last-seen-setup-instructions "1.4.0")
