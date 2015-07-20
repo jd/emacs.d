@@ -4,5 +4,5 @@
    nil
    '(("\\<\\(FIXME\\|HACK\\|XXX\\|TODO\\|NOTE\\)\\>"
       1
-      '(:box (:color "grey10" :line-width 2) :background "red" :bold t :foreground "yellow")
+      '(:box (:color "grey10" :line-width 2) :background "red" :weight bold :foreground "yellow")
       prepend))))
