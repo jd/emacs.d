@@ -15,7 +15,7 @@
   (require 's)
 
   (defun jd:escape-term-chars (string)
-    (s-replace-all '(("[" . "\\\\[")) "[foobar]"))
+    (s-replace-all '(("[" . "\\\\[")) string))
 
   (defun notifications-notify (&rest params)
     (let ((title (plist-get params :title))
