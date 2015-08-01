@@ -42,7 +42,7 @@
               "\\)"))
 
 (setq gnus-parameters
-      '(("^lists\\."
+      '(("^\\(lists\\|nnimap+Red Hat:Lists\\)\\."
          (subscribed . t))
         ("^lists\\.ding"
          (to-list . "ding@gnus.org"))
