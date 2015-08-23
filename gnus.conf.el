@@ -157,7 +157,8 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
                                                       (erase-buffer)
                                                       (current-buffer))
                                                     "mbsync"
-                                                    "-a")))))
+                                                    "-a"
+                                                    "-V")))))
 
 ;; gnus-group
 ;; Redefine this to nil because I pressed it by mistake too many times
