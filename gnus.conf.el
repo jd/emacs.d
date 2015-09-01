@@ -236,9 +236,8 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
          (address "acid@debian.org")
          (organization "Debian"))
         ("lists\\.debian\\.france"
-         (address "julien@danjou.info"))
-        ("INBOX\\.nous"
-         (reply-to "nous@danjou.info"))))
+         (address "julien@danjou.info"))))
+
 (setq gnus-gcc-mark-as-read t)
 ;; Automatically sign when sending mails
 (add-hook 'gnus-message-setup-hook 'mml-secure-message-sign-pgpmime)
