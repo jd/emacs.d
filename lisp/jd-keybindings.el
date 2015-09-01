@@ -36,7 +36,12 @@
                   (interactive)
                   (dired "/orion.naquadah.org:/srv/naquadah/upload")))
 
-(global-set-key "\C-xm" 'compose-mail-other-window)
+(global-set-key "\C-xm" (defun jd:compose-mail (arg)
+                          (interactive "P")
+                          (if arg
+                              (let ((gnus-newsgroup-name (gnus-group-completing-read)))
+                                (gnus-post-news 'post gnus-newsgroup-name))
+                            (compose-mail-other-window))))
 
 (global-set-key "\C-x\C-b" 'ibuffer)
 
