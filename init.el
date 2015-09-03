@@ -60,7 +60,7 @@ This variable is used in some places.")
 
 ;; C source code
 (setq frame-title-format '("" invocation-name ": %b"))
-(set-frame-font "DejaVu Sans Mono-12")
+(set-frame-font "Hack 12")
 ;; (set-fontset-font t 'unicode (font-spec :family "Droid Sans"))
 (if (string-equal system-type "darwin")
     ;; (set-fontset-font "fontset-default"
