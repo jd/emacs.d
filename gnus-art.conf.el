@@ -31,3 +31,8 @@
 (define-key gnus-article-mode-map "\\" 'jd:gnus-article-browse-review-or-bug)
 
 (setq gnus-article-browse-delete-temp t)
+
+(define-key gnus-article-mode-map (kbd "C-c C-\\")
+  (defun jd:gnus-mime-pipe-gcalcli ()
+    (interactive)
+    (gnus-mime-pipe-part "/usr/local/bin/gcalcli  --calendar jdanjou@redhat.com import")))
