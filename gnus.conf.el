@@ -68,8 +68,6 @@ More help   : https://help.launchpad.net/ListHelp"))
 http://lists.freedesktop.org/mailman/listinfo/\\1"))
         ("^lists\\.ornix\\.\\(.+\\)"
          (to-list . "\\1@ornix.org"))
-        ("^lists\\.\\(muse-el-.*\\)"
-         (to-list . "\\1@gna.org"))
         ("^lists\\.googlegroups\\.\\(.+\\)"
          (to-list . "\\1@googlegroups.com"))
         ("^lists\\.gnu\\.\\(.+\\)"
