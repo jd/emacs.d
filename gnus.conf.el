@@ -76,7 +76,7 @@ http://lists.freedesktop.org/mailman/listinfo/\\1"))
          (list-identifier . "\\\\[\\1\\\\]")
          (to-list . "\\1@redhat.com"))
         ("^nnimap\\+Red Hat:Lists\\.rh-openstack-dev"
-         (list-identifier . "\\\\[rhos-dev\\\\]"))
+         (list-identifier . "\\[rhos-dev\\]"))
         ("^lists\\.el-get-devel"
          (to-list . "el-get-devel@tapoueh.org"))
         ("^lists\\.debconf\\.\\(.+\\)"
