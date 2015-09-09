@@ -74,8 +74,6 @@ http://lists.freedesktop.org/mailman/listinfo/\\1"))
          (to-list . "\\1@googlegroups.com"))
         ("^lists\\.gnu\\.\\(.+\\)"
          (to-list . "\\1@gnu.org"))
-        ("^lists\\.gnu\\.\\(.+\\)"
-         (to-list . "\\1@gnu.org"))
         ("^nnimap\\+Red Hat:Lists\\.\\(.+\\)"
          (list-identifier . "\\\\[\\1\\\\]")
          (to-list . "\\1@redhat.com"))
