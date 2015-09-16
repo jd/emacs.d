@@ -155,6 +155,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
                                                       (buffer-disable-undo)
                                                       (erase-buffer)
                                                       (current-buffer))
+                                                    "nice"
                                                     "mbsync"
                                                     "-a"
                                                     "-V")))))
