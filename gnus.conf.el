@@ -156,7 +156,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
                                                       (erase-buffer)
                                                       (current-buffer))
                                                     "nice"
-                                                    "mbsync"
+                                                    (executable-find "mbsync")
                                                     "-a"
                                                     "-V")))))
 
