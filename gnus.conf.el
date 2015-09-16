@@ -152,6 +152,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
               (setq *mbsync-process* (start-process "mbsync"
                                                     (with-current-buffer
                                                         (get-buffer-create "*mbsync*")
+                                                      (buffer-disable-undo)
                                                       (erase-buffer)
                                                       (current-buffer))
                                                     "mbsync"
