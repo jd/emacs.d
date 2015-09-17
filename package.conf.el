@@ -7,6 +7,7 @@
 		   oauth2		; Should be a dep of google-stuff
 		   browse-kill-ring
                    fill-column-indicator
+                   ido-completing-read+ ; for magit
                    adoc-mode
                    powerline
 		   go-mode
