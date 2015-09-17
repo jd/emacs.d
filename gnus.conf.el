@@ -114,9 +114,9 @@ http://lists.debconf.org/mailman/listinfo/\\1"))
         ("^lists\\.openstack\\.\\(.+\\)"
          (to-list . "\\1@lists.openstack.org")
          (list-identifier . "\\\\[\\1\\\\]")
-         (banner . "__________________________________________________________________________
+         (banner . "_______________________________________________+
 .+
-Unsubscribe: .+@lists.openstack.org.+
+.+
 http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
         ("^lists\\.openstack-fr\\.\\(.+\\)"
          (to-list . "\\1@listes.openstack.fr"))
