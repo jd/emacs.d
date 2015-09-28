@@ -18,15 +18,15 @@
 
 (defvar jd:message-signatures
   '("/* Free Software hacker
-   http://julien.danjou.info */"
+   https://julien.danjou.info */"
     "# Free Software hacker
-# http://julien.danjou.info"
+# https://julien.danjou.info"
         "// Free Software hacker
-// http://julien.danjou.info"
+// https://julien.danjou.info"
         ";; Free Software hacker
-;; http://julien.danjou.info"
+;; https://julien.danjou.info"
         "-- Free Software hacker
--- http://julien.danjou.info")
+-- https://julien.danjou.info")
   "Random signatures to pick.")
 
 (setq message-signature '(concat "Julien Danjou\n" (nth (random (length jd:message-signatures)) jd:message-signatures)))
