@@ -252,7 +252,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
              '("\\b@jd\\|Julien\\|Danjou\\|jd\\b" 0 0 warning))
 (add-to-list 'gnus-emphasis-alist
              `(,(concat "\\b"
-                        (mapconcat 'identity '("ceilometer" "gnocchi") "\\|")
+                        (mapconcat 'identity '("ceilometer" "aodh" "gnocchi") "\\|")
                         "\\b")
                0 0 highlight))
 (setq gnus-visible-headers
