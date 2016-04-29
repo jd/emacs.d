@@ -37,7 +37,8 @@
               (mapconcat 'identity
                          '("lists\\."
                            "spam$"
-                           "INBOX\\.naquadah\\.adm$")
+                           "INBOX\\.naquadah\\.adm$"
+                           "Red Hat:Lists\\.")
                          "\\|")
               "\\)"))
 
