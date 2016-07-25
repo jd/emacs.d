@@ -62,9 +62,7 @@ This variable is used in some places.")
 (set-frame-font "Hack 12")
 ;; (set-fontset-font t 'unicode (font-spec :family "Droid Sans"))
 (if (string-equal system-type "darwin")
-    ;; (set-fontset-font "fontset-default"
-    ;;                   'unicode
-    ;;                   '("Menlo" . "iso10646-1"))
+    (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend)
     (progn
       (add-to-list 'exec-path "/usr/local/bin")
       (add-to-list 'exec-path "/usr/local/sbin"))
@@ -109,3 +107,4 @@ This variable is used in some places.")
 (org-crypt-use-before-save-magic)
 (bbdb-initialize 'gnus 'message)
 (bbdb-mua-auto-update-init 'gnus 'message)
+(put 'downcase-region 'disabled nil)
