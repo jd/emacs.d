@@ -184,8 +184,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
   (char-to-string gnus-unread-mark))
 
 (defun gnus-user-format-function-M (dummy)
-  (jd:gnus-image-or-space (char-to-string gnus-ticked-mark) "~/.emacs.d/icons/important.png"
-                          (cdr (assq 'tick gnus-tmp-marked))))
+  (char-to-string gnus-ticked-mark))
 
 (setq gnus-group-line-format "%ue%uM %S%p[%5t][%L]\t%P%5y:%B%(%g%)%O\n")
 
