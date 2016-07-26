@@ -62,8 +62,8 @@ This variable is used in some places.")
 (set-frame-font "Hack 12")
 ;; (set-fontset-font t 'unicode (font-spec :family "Droid Sans"))
 (if (string-equal system-type "darwin")
-    (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend)
     (progn
+      (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend)
       (add-to-list 'exec-path "/usr/local/bin")
       (add-to-list 'exec-path "/usr/local/sbin"))
   (menu-bar-mode -1))                   ; Kill the menu bar
