@@ -181,8 +181,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
         " "))))
 
 (defun gnus-user-format-function-e (dummy)
-  (jd:gnus-image-or-space (char-to-string gnus-unread-mark) "~/.emacs.d/icons/email.png"
-                          (> (string-to-number gnus-tmp-number-of-unread) 0)))
+  (char-to-string gnus-unread-mark))
 
 (defun gnus-user-format-function-M (dummy)
   (jd:gnus-image-or-space (char-to-string gnus-ticked-mark) "~/.emacs.d/icons/important.png"
