@@ -32,6 +32,7 @@
 		   goto-last-change
 		   git-gutter
 		   mmm-mode
+                   cython-mode
 		   clojure-mode
 		   slime
 		   jinja2-mode
