@@ -12,8 +12,6 @@
                     (return group)))))))))
 (setq display-time-format "")
 (setq display-time-default-load-average nil) ; no load average displayed
-(setq display-time-use-mail-icon t)
-(setq display-time-mail-icon
-      '(image :type png :file "~/.emacs.d/icons/email.png" :ascent center))
+(setq display-time-mail-string "📬")
 ;; Refresh after settings are loaded
 (display-time)
