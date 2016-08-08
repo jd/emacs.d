@@ -200,7 +200,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
 (setq gnus-summary-to-prefix "→"
       gnus-summary-newsgroup-prefix "⇶"
       ;; Marks
-      gnus-ticked-mark ?⚑
+      gnus-ticked-mark ?🚩
       gnus-dormant-mark ?⚐
       gnus-expirable-mark ?♻
       gnus-read-mark ?✓
