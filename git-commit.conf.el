@@ -5,5 +5,5 @@
 (add-to-list 'git-commit-known-pseudo-headers "Related-Bug")
 (add-to-list 'git-commit-known-pseudo-headers "Closes-Bug")
 (add-to-list 'git-commit-known-pseudo-headers "Implements")
-(add-to-list 'git-commit-known-pseudo-headers "Changed-Id")
+(add-to-list 'git-commit-known-pseudo-headers "Change-Id")
 (add-to-list 'git-commit-known-pseudo-headers "Depends-On")
