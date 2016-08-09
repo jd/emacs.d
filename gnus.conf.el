@@ -228,7 +228,6 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
          (name "Julien Danjou")
          (address "julien@danjou.info"))
         ("Red Hat:"
-         (name "Julien Danjou")
          (address "jdanjou@redhat.com")
          (signature "Julien Danjou\n;; Principal Software Engineer\n;; OpenStack Telemetry")
          (organization "Red Hat"))
