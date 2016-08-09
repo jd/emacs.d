@@ -8,7 +8,7 @@
     "jd@enovance\\.com"
     "jdanjou@redhat\\.com"
     "jd\\(\\+.+\\)?@naquadah.org")
-  "Regexp of my email addreses.")
+  "Regexp of my email addresses.")
 
 (defvar jd:email-addresses-regexp
   (concat "^\\("
