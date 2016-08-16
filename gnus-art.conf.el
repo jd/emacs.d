@@ -36,3 +36,6 @@
   (defun jd:gnus-mime-pipe-gcalcli ()
     (interactive)
     (gnus-mime-pipe-part "/usr/local/bin/gcalcli  --calendar jdanjou@redhat.com import")))
+
+(setq gnus-visible-headers
+      (concat gnus-visible-headers "\\|^User-Agent:\\|^X-Mailer:"))

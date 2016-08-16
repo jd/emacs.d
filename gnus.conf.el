@@ -254,8 +254,6 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
                         (mapconcat 'identity '("ceilometer" "aodh" "gnocchi") "\\|")
                         "\\b")
                0 0 highlight))
-(setq gnus-visible-headers
-      (concat gnus-visible-headers "\\|^User-Agent:\\|^X-Mailer:"))
 (setq gnus-sorted-header-list
       '("^From:" "^To:" "^Newsgroups:" "^Cc:" "^Subject:" "^Summary:" "^Keywords:" "^Followup-To:" "^Date:" "^Organization:"))
 (setq gnus-face-properties-alist
