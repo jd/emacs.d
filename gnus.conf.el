@@ -285,7 +285,7 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
 (gnus-add-configuration
  ;; two panes side-by-side
  '(article (horizontal 1.0
-                       (summary .5 point)
+                       (summary .55 point)
                        (article 1.0))))
 (gnus-add-configuration
  ;; two panes side-by-side
