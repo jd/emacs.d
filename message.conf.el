@@ -8,6 +8,16 @@
                                           "^submit@bugs.debian\\.org$"
                                           "\\)"))
 (setq message-confirm-send t)
+(add-hook 'message-send-hook
+          (defun jd:check-redhat-from-redhat ()
+            (unless (string-match-p "redhat.com" (message-field-value "From"))
+              (when (or (string-match-p "redhat.com" (message-field-value "To"))
+                        (string-match-p "redhat.com" (message-field-value "Cc")))
+                ;; I could use `y-or-n-p' but since `message-confirm-send' is
+                ;; enabled, I'm too much used of pressing `y' after C-c C-c.
+                (unless (string= "ok" (read-input "Send message to redhat.com addresses with non redhat.com From? [ok] "))
+                  (keyboard-quit))))))
+
 ;; Kill buffer when message is sent
 (setq message-kill-buffer-on-exit t)
 (setq message-elide-ellipsis "\n[…]\n\n")
