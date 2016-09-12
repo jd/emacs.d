@@ -37,6 +37,7 @@
 		   slime
 		   jinja2-mode
                    flycheck
+                   crux
                    ))
   (unless (package-installed-p package)
     (package-install package)))

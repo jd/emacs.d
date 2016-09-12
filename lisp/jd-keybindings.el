@@ -5,13 +5,6 @@
                       (save-buffers-kill-emacs)
                     (message "Coward!"))))
 
-
-(global-set-key "\C-cce"
-                (defun jd:edit-dot-emacs ()
-                  "Edit the ~/.emacs.d/init.el file"
-                  (interactive)
-                  (find-file (locate-user-emacs-file "init.el"))))
-
 (global-set-key "\C-ccd"
                 (defun jd:edit-emacs-dir ()
                   "Edit the ~/.emacs.d/ dir"
@@ -81,5 +74,13 @@
 (global-set-key (kbd "C-c d b") 'gnus-read-ephemeral-debian-bug-group)
 
 (global-set-key (kbd "C-x C-/") 'goto-last-change)
+
+(require 'crux)
+
+(global-set-key (kbd "C-x 4 t") 'crux-transpose-windows)
+(global-set-key (kbd "C-c r") 'crux-rename-file-and-buffer)
+(global-set-key (kbd "C-c c e") 'crux-find-user-init-file)
+(global-set-key [remap move-beginning-of-line] 'crux-move-beginning-of-line)
+(global-set-key (kbd "C-<return>") 'crux-smart-open-line)
 
 (provide 'jd-keybindings)
