@@ -4,6 +4,8 @@
 ;; Expand load-path
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+(package-initialize)
+
 ;; Add development directory for some project
 (dolist (dir '("~/Source/naquadah-theme"))
   (when (file-exists-p dir)
