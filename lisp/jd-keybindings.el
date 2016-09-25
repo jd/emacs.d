@@ -50,6 +50,8 @@
 
 (global-set-key (kbd "<f5>") 'recompile)
 
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+
 (require 'multi-term)
 (global-set-key [f6] (lambda () (interactive)
                        (unless (multi-term-dedicated-exist-p)
