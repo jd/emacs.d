@@ -1,5 +1,7 @@
 (require 'jd-buttonize)
 
+(add-to-list 'gnus-buttonized-mime-types "multipart/signed")
+
 (dolist (button jd:button-alist)
   (add-to-list 'gnus-header-button-alist
                (apply (lambda (context-regexp regexp button callback par)

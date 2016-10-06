@@ -265,7 +265,6 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
 (setq gnus-treat-from-gravatar 'head)
 (setq gnus-treat-mail-gravatar 'head)
 (setq gnus-treat-body-boundary nil)    ; No body/header separator
-(add-to-list 'gnus-buttonized-mime-types "multipart/signed")
 (setq gnus-blocked-images nil)          ; HTML rendering
 
 ;; gnus-gravatar
