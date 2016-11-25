@@ -38,7 +38,8 @@
                          '("lists\\."
                            "spam$"
                            "INBOX\\.naquadah\\.adm$"
-                           "nnimap\\+Red Hat:Lists\\.")
+                           "nnimap\\+Red Hat:Lists\\."
+                           "nnimap\\+Red Hat:INBOX\\.Bugzilla$")
                          "\\|")
               "\\)"))
 
