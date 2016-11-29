@@ -4,10 +4,10 @@
 
 ;; gnus
 (setq gnus-select-method
-      '(nnimap "Naquadah"
+      '(nnimap "Danjou"
                (nnimap-stream shell)
                (nnimap-shell-program
-                "/usr/local/opt/dovecot/libexec/dovecot/imap -o mail_location=maildir:~/Mail")))
+                "/usr/local/opt/dovecot/libexec/dovecot/imap -o mail_location=maildir:~/Mail/Danjou")))
 
 (setq gnus-secondary-select-methods
       '((nnimap "Red Hat"
@@ -17,7 +17,7 @@
 
 (setq gnus-novice-user nil)             ; I AM NOT!
 (setq gnus-spam-process-destinations
-      '(("." "spam")))
+      '(("." "Spam")))
 (setq gnus-agent nil)                   ; No agent
 (setq gnus-summary-line-format
       (concat "%z%U%R %~(max-right 17)~(pad-right 17)&user-date;  "
@@ -29,65 +29,46 @@
                                    (concat
                                     (if (string-match-p "^nn.+:" group)
                                         ""
-                                      "nnimap+Naquadah:")
+                                      "nnimap+Danjou:")
                                     (if (string= group "") "INBOX" group))))
 ;; Expire
 (setq gnus-total-expirable-newsgroups
       (concat "^\\("
               (mapconcat 'identity
-                         '("lists\\."
-                           "spam$"
-                           "INBOX\\.naquadah\\.adm$"
+                         '("Lists\\."
+                           "Spam$"
+                           "INBOX\\.Naquadah\\.adm$"
                            "nnimap\\+Red Hat:Lists\\."
                            "nnimap\\+Red Hat:INBOX\\.Bugzilla$")
                          "\\|")
               "\\)"))
 
+(define-key gnus-summary-mode-map (kbd "E")
+  (defun jd:gnus-move-to-trash ()
+    (interactive)
+    (gnus-summary-mark-as-read-forward 1)
+    (gnus-summary-move-article
+     nil
+     (cond
+      ((string-match-p "^nnimap:Red Hat" gnus-newsgroup-name)
+       "nnimap+Red Hat:Trash")
+      ((string-match-p "^nn.*:" gnus-newsgroup-name)
+       (error "Trash is unknown for current method"))
+      (t "Trash")))))
+
 (setq gnus-parameters
-      '(("^\\(lists\\|nnimap\\+Red Hat:Lists\\)\\."
+      '(("^\\(Lists\\|nnimap\\+Red Hat:Lists\\)\\."
          (subscribed . t))
-        ("^lists\\.ding"
+        ("^Lists\\.Gnus\\.ding"
          (to-list . "ding@gnus.org"))
-        ("^lists\\.awesome\\(-devel\\)?"
-         (to-list . "awesome\\1@naquadah.org"))
-        ("^lists\\.launchpad\\.\\(.+\\)"
-         (to-list . "\\1@lists.launchpad.net")
-         (list-identifier . "\\\\[\\1\\\\]")
-         (banner . "_______________________________________________
-Mailing list: https://launchpad.net/~\\1
-Post to     : \\1@lists.launchpad.net
-Unsubscribe : https://launchpad.net/~\\1
-More help   : https://help.launchpad.net/ListHelp"))
-        ("^lists\\.debian\\.\\(.+\\)"
+        ("^Lists\\.Debian\\.\\(.+\\)"
          (to-list . "debian-\\1@lists.debian.org"))
-        ("^lists\\.freedesktop\\.\\(.+\\)"
-         (list-identifier . "\\\\[\\1\\\\]")
-         (banner
-          .
-          "_______________________________________________
-\\1 mailing list
-\\1@lists.freedesktop.org
-http://lists.freedesktop.org/mailman/listinfo/\\1"))
-        ("^lists\\.ornix\\.\\(.+\\)"
-         (to-list . "\\1@ornix.org"))
-        ("^lists\\.googlegroups\\.\\(.+\\)"
-         (to-list . "\\1@googlegroups.com"))
-        ("^lists\\.gnu\\.\\(.+\\)"
-         (to-list . "\\1@gnu.org"))
         ("^nnimap\\+Red Hat:Lists\\.\\(.+\\)"
          (list-identifier . "\\\\[\\1\\\\]")
          (to-list . "\\1@redhat.com"))
         ("^nnimap\\+Red Hat:Lists\\.rh-openstack-dev"
          (list-identifier . "\\[rhos-dev\\]"))
-        ("^lists\\.el-get-devel"
-         (to-list . "el-get-devel@tapoueh.org"))
-        ("^lists\\.debconf\\.\\(.+\\)"
-         (list-identifier . "\\\\[\\1\\\\]")
-         (banner . "_______________________________________________
-\\1 mailing list
-\\1@lists.debconf.org
-http://lists.debconf.org/mailman/listinfo/\\1"))
-        ("^lists\\.openstack\\.review"
+        ("^Lists\\.OpenStack\\.review"
          (highlight-words .  (("\\bFAILURE\\b" 0 0 error)
                               ("\\bSUCCESS\\b" 0 0 success)
                               ("\\bSKIPPED\\b" 0 0 warning)
@@ -113,22 +94,15 @@ http://lists.debconf.org/mailman/listinfo/\\1"))
                               ("\\bCode-Review-2\\b" 0 0 error)
                               ("^.+ has uploaded a new change for review." 0 0 bold)
                               ("Jenkins has submitted this change and it was merged." 0 0 success))))
-        ("^lists\\.openstack\\.\\(.+\\)"
+        ("^Lists\\.OpenStack\\.\\(.+\\)"
          (to-list . "\\1@lists.openstack.org")
          (list-identifier . "\\\\[\\1\\\\]")
          (banner . "_______________________________________________+
 .+
 .+
 http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
-        ("^lists\\.openstack-fr\\.\\(.+\\)"
-         (to-list . "\\1@listes.openstack.fr"))
-        ("^lists\\.debian\\.alioth\\.\\(.+\\)"
-         (to-list . "\\1@lists.alioth.debian.org")
-         (list-identifier . "\\\\[\\1\\\\]")
-         (banner . "_______________________________________________
-\\1 mailing list
-\\1@lists.alioth.debian.org
-http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
+        ("^Lists\\.OpenStack-fr\\.\\(.+\\)"
+         (to-list . "\\1@listes.openstack.fr"))))
 
 ;; gnus-start
 (setq gnus-subscribe-newsgroup-method 'gnus-subscribe-alphabetically)
@@ -234,15 +208,13 @@ http://lists.alioth.debian.org/mailman/listinfo/\\1"))))
          (organization "Red Hat"))
         ("debian"
          (address "acid@debian.org")
-         (organization "Debian"))
-        ("lists\\.debian\\.france"
-         (address "julien@danjou.info"))))
+         (organization "Debian"))))
 
 (setq gnus-gcc-mark-as-read t)
 ;; Automatically sign when sending mails
 (add-hook 'gnus-message-setup-hook 'mml-secure-message-sign-pgpmime)
 ;; This is used when "posting"...
-(setq gnus-mailing-list-groups "lists")
+(setq gnus-mailing-list-groups "Lists")
 
 ;; gnus-async
 (setq gnus-use-header-prefetch t)       ; prefetch header for next group
