@@ -50,7 +50,7 @@
     (gnus-summary-move-article
      nil
      (cond
-      ((string-match-p "^nnimap:Red Hat" gnus-newsgroup-name)
+      ((string-match-p "^nnimap\\+Red Hat:.*" gnus-newsgroup-name)
        "nnimap+Red Hat:Trash")
       ((string-match-p "^nn.*:" gnus-newsgroup-name)
        (error "Trash is unknown for current method"))
