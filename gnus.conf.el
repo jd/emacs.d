@@ -46,7 +46,7 @@
 (define-key gnus-summary-mode-map (kbd "E")
   (defun jd:gnus-move-to-trash ()
     (interactive)
-    (gnus-summary-mark-as-read-forward 1)
+    (gnus-summary-mark-article-as-read gnus-del-mark)
     (gnus-summary-move-article
      nil
      (cond
