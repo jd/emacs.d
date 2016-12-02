@@ -17,7 +17,8 @@
 
 (setq gnus-novice-user nil)             ; I AM NOT!
 (setq gnus-spam-process-destinations
-      '(("." "Spam")))
+      '(("^nnimap\\+Red Hat:" "nnimap+Red Hat:Junk")
+        ("." "Spam")))
 (setq gnus-agent nil)                   ; No agent
 (setq gnus-summary-line-format
       (concat "%z%U%R %~(max-right 17)~(pad-right 17)&user-date;  "
