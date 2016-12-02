@@ -54,7 +54,8 @@
        "nnimap+Red Hat:Trash")
       ((string-match-p "^nn.*:" gnus-newsgroup-name)
        (error "Trash is unknown for current method"))
-      (t "Trash")))))
+      (t "Trash")))
+    (next-line)))
 
 (setq gnus-parameters
       '(("^\\(Lists\\|nnimap\\+Red Hat:Lists\\)\\."
