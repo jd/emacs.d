@@ -24,17 +24,16 @@
 (defun jd:gnus-article-browse-review-or-bug ()
   (interactive)
   (gnus-with-article-buffer
-    (article-goto-body)
-    (while (re-search-forward
-            (concat "\\("
-                    (mapconcat 'identity
-                               '("https://review.openstack.org/[0-9]+"
-                                 "https://bugs.launchpad.net/bugs/[0-9]+"
-                                 "https://bugzilla.redhat.com/show_bug.cgi\\?id=[0-9]+")
-                               "\\|")
-                    "\\)")
-            nil t)
-      (browse-url (match-string-no-properties 1)))))
+    (save-excursion
+      (article-goto-body)
+      (when (re-search-forward
+             (mapconcat 'identity
+                        '("To view, visit \\(https://review.openstack.org/[0-9]+\\)"
+                          "\\(https://bugs.launchpad.net/bugs/[0-9]+\\)"
+                          "\\(https://bugzilla.redhat.com/show_bug.cgi\\?id=[0-9]+\\)")
+                        "\\|")
+             nil t)
+        (browse-url (match-string-no-properties 1))))))
 
 (define-key gnus-summary-mode-map "\\" 'jd:gnus-article-browse-review-or-bug)
 (define-key gnus-article-mode-map "\\" 'jd:gnus-article-browse-review-or-bug)
