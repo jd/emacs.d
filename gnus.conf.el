@@ -5,12 +5,14 @@
 ;; gnus
 (setq gnus-select-method
       '(nnimap "Danjou"
+               (nnimap-expiry-target "Trash")
                (nnimap-stream shell)
                (nnimap-shell-program
                 "/usr/local/opt/dovecot/libexec/dovecot/imap -o mail_location=maildir:~/Mail/Danjou")))
 
 (setq gnus-secondary-select-methods
       '((nnimap "Red Hat"
+                (nnimap-expiry-target "nnimap+Red Hat:Trash")
                 (nnimap-stream shell)
                 (nnimap-shell-program
                  "/usr/local/opt/dovecot/libexec/dovecot/imap -o 'mail_location=maildir:~/Mail/Red Hat'"))))
@@ -44,19 +46,21 @@
                          "\\|")
               "\\)"))
 
-(define-key gnus-summary-mode-map (kbd "E")
-  (defun jd:gnus-move-to-trash ()
-    (interactive)
-    (gnus-summary-mark-article-as-read gnus-del-mark)
-    (gnus-summary-move-article
-     nil
-     (cond
-      ((string-match-p "^nnimap\\+Red Hat:.*" gnus-newsgroup-name)
-       "nnimap+Red Hat:Trash")
-      ((string-match-p "^nn.*:" gnus-newsgroup-name)
-       (error "Trash is unknown for current method"))
-      (t "Trash")))
-    (next-line)))
+(setq nnmail-expiry-wait-function
+      (lambda (newsgroup)
+        (debug)
+        (if (string-match-p (concat "^\\("
+                                    (mapconcat 'identity
+                                               '("Lists\\."
+                                                 "Spam$"
+                                                 "INBOX\\.Naquadah\\.adm$"
+                                                 "nnimap\\+Red Hat:Lists\\."
+                                                 "nnimap\\+Red Hat:INBOX\\.Bugzilla$")
+                                               "\\|")
+                                    "\\)")
+                            newsgroup)
+            60
+          'immediate)))
 
 (setq gnus-parameters
       '(("^\\(Lists\\|nnimap\\+Red Hat:Lists\\)\\."
@@ -248,9 +252,6 @@ http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
 
 ;; nnheader
 (setq gnus-nov-is-evil t)               ; No NOV
-
-;; nnmail
-(setq nnmail-expiry-wait 60)
 
 ;; gnus-score
 (setq gnus-home-score-file "~/.gnus.score")
