@@ -5,14 +5,14 @@
 ;; gnus
 (setq gnus-select-method
       '(nnimap "Danjou"
-               (nnimap-expiry-target "Trash")
+               (nnmail-expiry-target "Trash")
                (nnimap-stream shell)
                (nnimap-shell-program
                 "/usr/local/opt/dovecot/libexec/dovecot/imap -o mail_location=maildir:~/Mail/Danjou")))
 
 (setq gnus-secondary-select-methods
       '((nnimap "Red Hat"
-                (nnimap-expiry-target "nnimap+Red Hat:Trash")
+                (nnmail-expiry-target "nnimap+Red Hat:Trash")
                 (nnimap-stream shell)
                 (nnimap-shell-program
                  "/usr/local/opt/dovecot/libexec/dovecot/imap -o 'mail_location=maildir:~/Mail/Red Hat'"))))
