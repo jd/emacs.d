@@ -48,7 +48,6 @@
 
 (setq nnmail-expiry-wait-function
       (lambda (newsgroup)
-        (debug)
         (if (string-match-p (concat "^\\("
                                     (mapconcat 'identity
                                                '("Lists\\."
