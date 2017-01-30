@@ -5,14 +5,12 @@
 ;; gnus
 (setq gnus-select-method
       '(nnimap "Danjou"
-               (nnmail-expiry-target "Trash")
                (nnimap-stream shell)
                (nnimap-shell-program
                 "/usr/local/opt/dovecot/libexec/dovecot/imap -o mail_location=maildir:~/Mail/Danjou")))
 
 (setq gnus-secondary-select-methods
       '((nnimap "Red Hat"
-                (nnmail-expiry-target "nnimap+Red Hat:Trash")
                 (nnimap-stream shell)
                 (nnimap-shell-program
                  "/usr/local/opt/dovecot/libexec/dovecot/imap -o 'mail_location=maildir:~/Mail/Red Hat'"))))
@@ -45,6 +43,14 @@
                            "nnimap\\+Red Hat:INBOX\\.Bugzilla$")
                          "\\|")
               "\\)"))
+
+(setq nnmail-expiry-target
+      (defun jd:nnmail-expiry-target (group)
+        (debug)
+        (if (string-match-p "^nnimap\\+Red Hat:" group)
+            "nnimap+Red Hat:Trash"
+          "Trash"
+          )))
 
 (setq nnmail-expiry-wait-function
       (lambda (newsgroup)
