@@ -46,11 +46,14 @@
 
 (setq nnmail-expiry-target
       (defun jd:nnmail-expiry-target (group)
-        (debug)
-        (if (string-match-p "^nnimap\\+Red Hat:" group)
-            "nnimap+Red Hat:Trash"
-          "Trash"
-          )))
+        ;; `server' is not passed, it's defined by gnus nnimap internal method
+        (cond
+         ((string= "Red Hat" server)
+          "nnimap+Red Hat:Trash")
+         ((string= "Danjou" server)
+          "Trash")
+         (t
+          (error "Unknown server")))))
 
 (setq nnmail-expiry-wait-function
       (lambda (newsgroup)
