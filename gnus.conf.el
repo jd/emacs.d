@@ -44,17 +44,6 @@
                          "\\|")
               "\\)"))
 
-(setq nnmail-expiry-target
-      (defun jd:nnmail-expiry-target (group)
-        ;; `server' is not passed, it's defined by gnus nnimap internal method
-        (cond
-         ((string= "Red Hat" server)
-          "nnimap+Red Hat:Trash")
-         ((string= "Danjou" server)
-          "Trash")
-         (t
-          (error "Unknown server")))))
-
 (setq nnmail-expiry-wait-function
       (lambda (newsgroup)
         (if (string-match-p (concat "^\\("
@@ -70,8 +59,16 @@
             60
           'immediate)))
 
+;; Old this parameters are searched through using `gnus-group-find-parameter'
+;; and each item in the list that matches the regexp overrides the previous
+;; value.
+;; Check with e.g. (gnus-group-find-parameter "INBOX" 'expiry-target)
 (setq gnus-parameters
-      '(("^\\(Lists\\|nnimap\\+Red Hat:Lists\\)\\."
+      '(("."
+         (expiry-target . "Trash"))
+        ("^nnimap\\+Red Hat:"
+         (expiry-target . "nnimap+Red Hat:Trash"))
+        ("^\\(Lists\\|nnimap\\+Red Hat:Lists\\)\\."
          (subscribed . t))
         ("^Lists\\.Gnus\\.ding"
          (to-list . "ding@gnus.org"))
