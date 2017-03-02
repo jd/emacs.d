@@ -4,6 +4,7 @@
 (package-initialize)
 
 (dolist (package '(naquadah-theme
+                   anaconda-mode
 		   oauth2		; Should be a dep of google-stuff
 		   browse-kill-ring
                    fill-column-indicator
