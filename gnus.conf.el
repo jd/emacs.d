@@ -215,7 +215,7 @@ http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
          (address "julien@danjou.info"))
         ("Red Hat:"
          (address "jdanjou@redhat.com")
-         (signature "Julien Danjou\n;; Principal Software Engineer\n;; Red Hat OpenStack Telemetry")
+         (signature "Julien Danjou\n;; Principal Software Engineer\n;; Red Hat – OpenStack Telemetry")
          (organization "Red Hat"))
         ("debian"
          (address "acid@debian.org")
