@@ -7,3 +7,4 @@
 (add-to-list 'git-commit-known-pseudo-headers "Implements")
 (add-to-list 'git-commit-known-pseudo-headers "Change-Id")
 (add-to-list 'git-commit-known-pseudo-headers "Depends-On")
+(add-to-list 'git-commit-known-pseudo-headers "Needed-By")
