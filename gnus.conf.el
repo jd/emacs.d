@@ -79,6 +79,8 @@
          (to-list . "\\1@redhat.com"))
         ("^nnimap\\+Red Hat:Lists\\.rh-openstack-dev"
          (list-identifier . "\\[rhos-dev\\]"))
+        ("^nnimap\\+Red Hat:Lists\\.kube-virt-dev"
+         (list-identifier . "\\[kubevirt-dev\\]"))
         ("^Lists\\.OpenStack\\.review"
          (highlight-words .  (("\\bFAILURE\\b" 0 0 error)
                               ("\\bSUCCESS\\b" 0 0 success)
