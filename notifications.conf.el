@@ -30,5 +30,5 @@
                     "-title" (if title
                                  (jd:escape-term-chars (jd:xml-unescape-string title))
                                "")
-                    "-activate" "org.gnu.Emacs"
+                    ;; "-activate" "org.gnu.Emacs"  ; starting with 1.8.0 this blocks?!
                     "-sender" "org.gnu.Emacs"))))
