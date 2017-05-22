@@ -27,7 +27,7 @@
     (save-excursion
       (article-goto-body)
       (when (re-search-forward
-             "^\\(?:To view, visit \\)?\\(https://review.openstack.org/[0-9]+\\|https://bugs.launchpad.net/bugs/[0-9]+\\|https://bugzilla.redhat.com/show_bug.cgi\\?id=[0-9]+\\|https://github.com/.+/.+/issues/[0-9]+\\)" nil t)
+             "^\\(?:To view, visit \\)?\\(https://review.openstack.org/[0-9]+\\|https://bugs.launchpad.net/bugs/[0-9]+\\|https://bugzilla.redhat.com/show_bug.cgi\\?id=[0-9]+\\|https://github.com/.+/.+/issues/[0-9]+\\|https://travis-ci.org/.+/.+/builds/.+\\)" nil t)
         (browse-url (match-string-no-properties 1))))))
 
 (define-key gnus-summary-mode-map "\\" 'jd:gnus-article-browse-review-or-bug)
