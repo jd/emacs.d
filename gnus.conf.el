@@ -110,6 +110,7 @@
         ("^Lists\\.Travis-CI"
          (highlight-words .  (("\\bFailed\\b" 0 0 error)
                               ("\\bErrored\\b" 0 0 error)
+                              ("\\bBroken\\b" 0 0 error)
                               ("\\bFixed\\b" 0 0 success)
                               ("\\bPassed\\b" 0 0 success))))
         ("^Lists\\.OpenStack\\.\\(.+\\)"
