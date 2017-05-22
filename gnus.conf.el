@@ -107,6 +107,11 @@
                               ("\\bCode-Review-2\\b" 0 0 error)
                               ("^.+ has uploaded a new change for review." 0 0 bold)
                               ("Jenkins has submitted this change and it was merged." 0 0 success))))
+        ("^Lists\\.Travis-CI"
+         (highlight-words .  (("\\bFailed\\b" 0 0 error)
+                              ("\\bErrored\\b" 0 0 error)
+                              ("\\bFixed\\b" 0 0 success)
+                              ("\\bPassed\\b" 0 0 success))))
         ("^Lists\\.OpenStack\\.\\(.+\\)"
          (to-list . "\\1@lists.openstack.org")
          (list-identifier . "\\\\[\\1\\\\]")
