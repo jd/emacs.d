@@ -6,6 +6,7 @@
 (dolist (package '(naquadah-theme
                    ;; anaconda-mode
 		   oauth2		; Should be a dep of google-stuff
+                   dockerfile-mode
 		   browse-kill-ring
                    fill-column-indicator
                    ido-completing-read+ ; for magit
