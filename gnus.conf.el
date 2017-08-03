@@ -113,6 +113,10 @@
                               ("\\bBroken\\b" 0 0 error)
                               ("\\bFixed\\b" 0 0 success)
                               ("\\bPassed\\b" 0 0 success))))
+        ("^Lists\\.GitHub"
+         (highlight-words .  (("\\bFAILED\\b" 0 0 error)
+                              ("\\bERRORED\\b" 0 0 error)
+                              ("\\bPASSED\\b" 0 0 success))))
         ("^Lists\\.OpenStack\\.\\(.+\\)"
          (to-list . "\\1@lists.openstack.org")
          (list-identifier . "\\\\[\\1\\\\]")
