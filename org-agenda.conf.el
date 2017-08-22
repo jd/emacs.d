@@ -1,20 +1,3 @@
-(setq org-agenda-day-face-function
-      (defun jd:org-agenda-day-face-holidays-function (date)
-        "Compute DATE face with holidays."
-        (unless (org-agenda-todayp date)
-          (dolist (file (org-agenda-files nil 'ifmode))
-            (let ((face
-                   (dolist (entry (org-agenda-get-day-entries file date))
-                     (let ((category (with-temp-buffer
-                                       (insert entry)
-                                       (org-get-category (point-min)))))
-                       (cond ((or (string= "Holidays" category)
-                                  (string= "RTT" category)
-                                  (string= "Vacation" category))
-                              (return 'org-agenda-date-weekend))
-                             ((string-match-p "Telecommuting" entry)
-                              (return 'org-agenda-date-tc)))))))
-              (when face (return face)))))))
 (setq org-stuck-projects
       '("TODO=\"PROJECT\""
 	("TODO" "STARTED" "FEEDBACK" "REWORK" "VERIFY" "DELEGATED")
@@ -29,15 +12,13 @@
         ("Org" "~/.emacs.d/icons/org/org.png" nil nil :ascent center)
         ("Medical" "~/.emacs.d/icons/org/medical.png" nil nil :ascent center)
         ("Music" "~/.emacs.d/icons/org/music.png" nil nil :ascent center)
-        ("Wii" "~/.emacs.d/icons/org/wii.png" nil nil :ascent center)
         ("Trip" "~/.emacs.d/icons/org/trip.png" nil nil :ascent center)
-        ("Train" "~/.emacs.d/icons/org/train.png" nil nil :ascent center)
         ("Anniv" "~/.emacs.d/icons/org/anniversary.png" nil nil :ascent center)
         ("Debian" "~/.emacs.d/icons/org/debian.png" nil nil :ascent center)
         ("Plants" "~/.emacs.d/icons/org/tree.png" nil nil :ascent center)
         ("awesome" "~/.emacs.d/icons/org/awesome.png" nil nil :ascent center)
         ("Solar" "~/.emacs.d/icons/org/solar.png" nil nil :ascent center)
-        ("Reading" "~/.emacs.d/icons/org/book.png" nil nil :ascent center)
+        ("Books" "~/.emacs.d/icons/org/book.png" nil nil :ascent center)
         ("OpenStack" "~/.emacs.d/icons/org/openstack.png" nil nil :ascent center)
         ("Ceilometer" "~/.emacs.d/icons/org/openstack.png" nil nil :ascent center)
         ("\\(Holidays\\|Vacation\\)" "~/.emacs.d/icons/org/holidays.png" nil nil :ascent center)
