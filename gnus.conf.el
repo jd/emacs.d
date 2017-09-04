@@ -56,7 +56,7 @@
                                                "\\|")
                                     "\\)")
                             newsgroup)
-            60
+            120
           'immediate)))
 
 ;; Old this parameters are searched through using `gnus-group-find-parameter'
