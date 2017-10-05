@@ -9,10 +9,6 @@
                      `(,(file-name-nondirectory directory) (filename . ,(concat directory "/"))))
                    (remove-if-not 'file-directory-p
                                   (directory-files jd:projects-directory t "^[^\.][^\.]*" t)))
-         ,@(mapcar (lambda (directory)
-                     `(,(concat "Debian/" (file-name-nondirectory directory)) (filename . ,(concat directory "/"))))
-                   (remove-if-not 'file-directory-p
-                                  (directory-files "~/Debian/" t "^[^\.][^\.]*" t)))
          ("Terminals" (mode . term-mode))
 	 ("Org" (or (mode . org-mode)
                     (mode . org-agenda-mode)
