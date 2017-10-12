@@ -4,6 +4,13 @@
 ;; Expand load-path
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+;; Each file named <somelibrary>.conf.el is loaded just after the library is
+;; loaded.
+(dolist (file (directory-files user-emacs-directory))
+  (when (string-match (format "^\\(.+\\)\\.conf\\.el$") file)
+    (eval-after-load (match-string-no-properties 1 file)
+      `(load ,(concat user-emacs-directory file)))))
+
 (package-initialize)
 
 ;; Add development directory for some project
@@ -24,13 +31,6 @@
 (dolist (file (directory-files user-emacs-directory))
   (when (string-match (format "^\\(.+\\)\\.preload\\.el$") file)
     (load (concat user-emacs-directory file))))
-
-;; Each file named <somelibrary>.conf.el is loaded just after the library is
-;; loaded.
-(dolist (file (directory-files user-emacs-directory))
-  (when (string-match (format "^\\(.+\\)\\.conf\\.el$") file)
-    (eval-after-load (match-string-no-properties 1 file)
-      `(load ,(concat user-emacs-directory file)))))
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
