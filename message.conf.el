@@ -41,6 +41,12 @@
 
 (setq message-signature '(concat "Julien Danjou\n" (nth (random (length jd:message-signatures)) jd:message-signatures)))
 
+;; `message-send-mail-function' can be called before any of this is set, so we
+;; should set it right now and not using `eval-after-load'.
+(setq smtpmail-smtp-server "smtp.fastmail.com")
+(setq smtpmail-stream-type 'starttls)
+(setq smtpmail-smtp-service "submission")
+
 (setq message-send-mail-function
       (defun jd:message-smtpmail-send-it ()
         (if (string-match-p "redhat.com" (message-field-value "From"))
