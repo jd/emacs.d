@@ -89,6 +89,7 @@ This variable is used in some places.")
 (display-time-mode 1)
 (global-hi-lock-mode 1)                 ; highlight stuff
 (global-git-gutter-mode 1)              ; git gutter seems nice
+(global-color-identifiers-mode 1)       ; amazing mode to have plenty of colors
 (savehist-mode 1)
 (blink-cursor-mode 1)			; blink!
 (delete-selection-mode 1)		; Transient mark can delete/replace

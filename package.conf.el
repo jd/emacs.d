@@ -40,6 +40,7 @@
 		   jinja2-mode
                    flycheck
                    crux
+                   color-identifiers-mode
                    ))
   (unless (package-installed-p package)
     (package-install package)))
