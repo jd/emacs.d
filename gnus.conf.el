@@ -231,7 +231,10 @@ http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
          (organization "Red Hat"))
         ("debian"
          (address "acid@debian.org")
-         (organization "Debian"))))
+         (organization "Debian"))
+        ("mergify"
+         (address "jd@mergify.io")
+         (organization "Mergify.io"))))
 
 (setq gnus-gcc-mark-as-read t)
 ;; Automatically sign when sending mails
@@ -262,6 +265,7 @@ http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
 (setq gnus-treat-mail-gravatar 'head)
 (setq gnus-treat-body-boundary nil)    ; No body/header separator
 (setq gnus-blocked-images nil)          ; HTML rendering
+(setq gnus-large-newsgroup 1000)
 
 ;; gnus-gravatar
 (setq gnus-gravatar-properties '(:ascent center))
