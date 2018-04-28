@@ -234,6 +234,11 @@ http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
          (organization "Debian"))
         ("mergify"
          (address "jd@mergify.io")
+         (organization "Mergify.io"))
+        ("mergify\.support"
+         (address "jd@mergify.io")
+         (reply-to "support@mergify.io")
+         (Cc "support@mergify.io")
          (organization "Mergify.io"))))
 
 (setq gnus-gcc-mark-as-read t)
