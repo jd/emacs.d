@@ -234,6 +234,7 @@ http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
          (organization "Debian"))
         ("mergify"
          (address "jd@mergify.io")
+         (signature "Julien Danjou")
          (organization "Mergify.io"))
         ("mergify\.support"
          (address "jd@mergify.io")
