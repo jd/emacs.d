@@ -8,6 +8,7 @@
     "jd@enovance\\.com"
     "jd@mergify\\.io"
     "jdanjou@redhat\\.com"
+    "julien\\.danjou@redhat\\.com"
     "jd\\(\\+.+\\)?@naquadah.org")
   "Regexp of my email addresses.")
 
