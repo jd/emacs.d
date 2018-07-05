@@ -53,5 +53,3 @@
             (let ((smtpmail-smtp-server "smtp.corp.redhat.com"))
               (message-smtpmail-send-it))
           (message-smtpmail-send-it))))
-
-(setq mml2015-use 'epg)                 ; workaround because it's nil i don't know why
