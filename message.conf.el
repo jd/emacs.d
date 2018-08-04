@@ -15,7 +15,7 @@
                         (string-match-p "redhat.com" (or (message-field-value "Cc") "")))
                 ;; I could use `y-or-n-p' but since `message-confirm-send' is
                 ;; enabled, I'm too much used of pressing `y' after C-c C-c.
-                (unless (string= "ok" (read-input "Send message to redhat.com addresses with non redhat.com From? [ok] "))
+                (unless (string= "ok" (read-from-minibuffer "Send message to redhat.com addresses with non redhat.com From? [ok] "))
                   (keyboard-quit))))))
 
 ;; Kill buffer when message is sent
