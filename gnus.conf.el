@@ -256,7 +256,7 @@ http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
              '("\\b@jd\\|Julien\\|Danjou\\|jd\\b" 0 0 warning))
 (add-to-list 'gnus-emphasis-alist
              `(,(concat "\\b"
-                        (mapconcat 'identity '("ceilometer" "aodh" "gnocchi") "\\|")
+                        (mapconcat 'identity '("ceilometer" "aodh" "gnocchi" "panko" "metmon") "\\|")
                         "\\b")
                0 0 highlight))
 (setq gnus-sorted-header-list
