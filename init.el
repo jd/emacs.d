@@ -65,8 +65,9 @@ This variable is used in some places.")
 (if (string-equal system-type "darwin")
     (progn
       (set-fontset-font t 'unicode "Apple Color Emoji 8" nil 'prepend)
-      (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+      (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin:~/.local/bin"))
       (add-to-list 'exec-path "/usr/local/bin")
+      (add-to-list 'exec-path (expand-file-name "~/.local/bin"))
       (add-to-list 'exec-path "/usr/local/sbin"))
   (menu-bar-mode -1))                   ; Kill the menu bar
 (setq ns-right-alternate-modifier nil)  ; Do not use the right Option as
