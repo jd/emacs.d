@@ -33,9 +33,9 @@
 
 (add-hook 'sgml-mode-hook 'jd:customize-prog-mode-common)
 
+;; Python
+(elpy-enable)
 (add-hook 'python-mode-hook 'fci-mode)
-;; (add-hook 'python-mode-hook 'anaconda-mode)
-;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
 
 ;; Fucking slow down everything
 ;; (semantic-mode 1)
