@@ -86,7 +86,6 @@ This variable is used in some places.")
 (put 'narrow-to-region 'disabled nil)
 (set-default 'indent-tabs-mode nil)    ; always use spaces to indent, no tab
 
-(display-time-mode 1)
 (global-hi-lock-mode 1)                 ; highlight stuff
 (global-git-gutter-mode 1)              ; git gutter seems nice
 (global-color-identifiers-mode 1)       ; amazing mode to have plenty of colors
