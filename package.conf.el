@@ -40,6 +40,7 @@
 		   slime
 		   jinja2-mode
                    flycheck
+                   flycheck-color-mode-line
                    crux
                    color-identifiers-mode
                    ))
