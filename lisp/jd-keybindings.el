@@ -12,22 +12,11 @@
                   (let ((default-directory "~/.emacs.d/"))
                     (call-interactively 'find-file))))
 
-(global-set-key "\C-ccn"
-                (defun jd:edit-notes ()
-                  "Edit my note file"
-                  (interactive)
-                  (find-file (concat org-directory "/notes.org"))))
-
 (global-set-key [f11]
                 (defun jd:set-frame-maximized ()
                   (interactive)
                   (set-frame-parameter nil 'fullscreen
                                        (if (eq (frame-parameter nil 'fullscreen) 'maximized) nil 'maximized))))
-
-(global-set-key "\C-cnu"
-                (lambda ()
-                  (interactive)
-                  (dired "/orion.naquadah.org:/srv/naquadah/upload")))
 
 (global-set-key "\C-xm" (defun jd:compose-mail (arg)
                           (interactive "P")
@@ -60,14 +49,6 @@
 (global-set-key [S-f6] 'multi-term-dedicated-toggle)
 (global-set-key [f9] 'multi-term-next)
 (global-set-key [S-f9] 'multi-term)
-
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-switchb)
-(global-set-key "\C-cL" 'org-insert-link-global)
-(global-set-key "\C-co" 'org-open-at-point-global)
-(global-set-key (kbd "<f10>") 'org-agenda-list)
-(global-set-key (kbd "S-<f10>") 'org-todo-list)
 
 (global-set-key (kbd "C-c g") 'jd:google)
 
