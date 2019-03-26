@@ -9,16 +9,9 @@
                (nnimap-shell-program
                 "/usr/local/opt/dovecot/libexec/dovecot/imap -o mail_location=maildir:~/Mail/Danjou")))
 
-(setq gnus-secondary-select-methods
-      '((nnimap "Red Hat"
-                (nnimap-stream shell)
-                (nnimap-shell-program
-                 "/usr/local/opt/dovecot/libexec/dovecot/imap -o 'mail_location=maildir:~/Mail/Red Hat'"))))
-
 (setq gnus-novice-user nil)             ; I AM NOT!
 (setq gnus-spam-process-destinations
-      '(("^nnimap\\+Red Hat:" "nnimap+Red Hat:Junk")
-        ("." "Spam")))
+      '(("." "Spam")))
 (setq gnus-agent nil)                   ; No agent
 (setq gnus-summary-line-format
       (concat "%z%U%R %~(max-right 17)~(pad-right 17)&user-date;  "
@@ -38,9 +31,7 @@
               (mapconcat 'identity
                          '("Lists\\."
                            "Spam$"
-                           "INBOX\\.Naquadah\\.adm$"
-                           "nnimap\\+Red Hat:Lists\\."
-                           "nnimap\\+Red Hat:INBOX\\.Bugzilla$")
+                           "INBOX\\.Naquadah\\.adm$")
                          "\\|")
               "\\)"))
 
@@ -50,9 +41,7 @@
                                     (mapconcat 'identity
                                                '("Lists\\."
                                                  "Spam$"
-                                                 "INBOX\\.Naquadah\\.adm$"
-                                                 "nnimap\\+Red Hat:Lists\\."
-                                                 "nnimap\\+Red Hat:INBOX\\.Bugzilla$")
+                                                 "INBOX\\.Naquadah\\.adm$")
                                                "\\|")
                                     "\\)")
                             newsgroup)
@@ -66,21 +55,10 @@
 (setq gnus-parameters
       '(("."
          (expiry-target . "Trash"))
-        ("^nnimap\\+Red Hat:"
-         (expiry-target . "nnimap+Red Hat:Trash"))
-        ("^\\(Lists\\|nnimap\\+Red Hat:Lists\\)\\."
-         (subscribed . t))
         ("^Lists\\.Gnus\\.ding"
          (to-list . "ding@gnus.org"))
         ("^Lists\\.Debian\\.\\(.+\\)"
          (to-list . "debian-\\1@lists.debian.org"))
-        ("^nnimap\\+Red Hat:Lists\\.\\(.+\\)"
-         (list-identifier . "\\\\[\\1\\\\]")
-         (to-list . "\\1@redhat.com"))
-        ("^nnimap\\+Red Hat:Lists\\.rh-openstack-dev"
-         (list-identifier . "\\[rhos-dev\\]"))
-        ("^nnimap\\+Red Hat:Lists\\.kube-virt-dev"
-         (list-identifier . "\\[kubevirt-dev\\]"))
         ("^Lists\\.OpenStack\\.review"
          (highlight-words .  (("\\bFAILURE\\b" 0 0 error)
                               ("\\bSUCCESS\\b" 0 0 success)
@@ -225,10 +203,6 @@ http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
       '((".*"
          (name "Julien Danjou")
          (address "julien@danjou.info"))
-        ("Red Hat:"
-         (address "jdanjou@redhat.com")
-         (signature "Julien Danjou\n;; Principal Software Engineer\n;; Red Hat – OpenStack Metrics & Monitoring")
-         (organization "Red Hat"))
         ("debian"
          (address "acid@debian.org")
          (organization "Debian"))
