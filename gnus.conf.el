@@ -218,7 +218,7 @@ http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
 
 (setq gnus-gcc-mark-as-read t)
 ;; Automatically sign when sending mails
-(add-hook 'gnus-message-setup-hook 'mml-secure-message-sign-pgpmime)
+;; (add-hook 'gnus-message-setup-hook 'mml-secure-message-sign-pgpmime)
 ;; This is used when "posting"...
 (setq gnus-mailing-list-groups "Lists")
 
