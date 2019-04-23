@@ -59,7 +59,7 @@
          (to-list . "ding@gnus.org"))
         ("^Lists\\.Debian\\.\\(.+\\)"
          (to-list . "debian-\\1@lists.debian.org"))
-        ("^Lists\\.OpenStack\\.review"
+        ("^Lists\\.OpenDev\\.review"
          (highlight-words .  (("\\bFAILURE\\b" 0 0 error)
                               ("\\bSUCCESS\\b" 0 0 success)
                               ("\\bSKIPPED\\b" 0 0 warning)
@@ -94,16 +94,7 @@
         ("^Lists\\.GitHub"
          (highlight-words .  (("\\bFAILED\\b" 0 0 error)
                               ("\\bERRORED\\b" 0 0 error)
-                              ("\\bPASSED\\b" 0 0 success))))
-        ("^Lists\\.OpenStack\\.\\(.+\\)"
-         (to-list . "\\1@lists.openstack.org")
-         (list-identifier . "\\\\[\\1\\\\]")
-         (banner . "_______________________________________________+
-.+
-.+
-http://lists.openstack.org/cgi-bin/mailman/listinfo/\\1"))
-        ("^Lists\\.OpenStack-fr\\.\\(.+\\)"
-         (to-list . "\\1@listes.openstack.fr"))))
+                              ("\\bPASSED\\b" 0 0 success))))))
 
 ;; gnus-start
 (setq gnus-subscribe-newsgroup-method 'gnus-subscribe-alphabetically)
