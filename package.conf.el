@@ -7,6 +7,7 @@
                    elpy
                    ;; anaconda-mode
 		   oauth2		; Should be a dep of google-stuff
+                   protobuf-mode
                    dockerfile-mode
 		   browse-kill-ring
                    fill-column-indicator
