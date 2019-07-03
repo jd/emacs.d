@@ -18,7 +18,10 @@
 (defun jd:customize-prog-mode-common ()
   (jd:font-lock-add-hack-keywords)
   (rainbow-mode 1)
-  (rainbow-delimiters-mode 1)
+  (case major-mode
+    ((jinja2-mode html-mode))
+    (t
+     (rainbow-delimiters-mode 1)))
   (setq show-trailing-whitespace t)
   (flyspell-prog-mode))
 
