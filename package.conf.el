@@ -5,6 +5,7 @@
 
 (dolist (package '(naquadah-theme
                    elpy
+                   rjsx-mode
                    ;; anaconda-mode
 		   oauth2		; Should be a dep of google-stuff
                    protobuf-mode
