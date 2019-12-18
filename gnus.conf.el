@@ -59,6 +59,16 @@
          (to-list . "ding@gnus.org"))
         ("^Lists\\.Debian\\.\\(.+\\)"
          (to-list . "debian-\\1@lists.debian.org"))
+        ("^Lists\\.Python\\.\\(.+\\)"
+         (to-list . "python-\\1@python.org")
+         (list-identifier . "\\\\[Python\-\\1\\\\]")
+         (banner . "_______________________________________________
+Python-Dev mailing list -- python-\\1@python.org
+To unsubscribe send an email to python-\\1-leave@python.org
+https://mail.python.org/mailman3/lists/python-\\1.python.org/
+Message archived at https://mail.python.org/archives/list/python-\\1@python.org/message/.*
+Code of Conduct: http://python.org/psf/codeofconduct/
+"))
         ("^Lists\\.OpenDev\\.review"
          (highlight-words .  (("\\bFAILURE\\b" 0 0 error)
                               ("\\bSUCCESS\\b" 0 0 success)
