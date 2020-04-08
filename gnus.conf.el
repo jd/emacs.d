@@ -55,6 +55,8 @@
 (setq gnus-parameters
       '(("."
          (expiry-target . "Trash"))
+        ("^Lists\\."
+         (subscribed . t))
         ("^Lists\\.Gnus\\.ding"
          (to-list . "ding@gnus.org"))
         ("^Lists\\.Debian\\.\\(.+\\)"
