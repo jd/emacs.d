@@ -1,3 +1,5 @@
+(require 'cl)
+
 (global-git-commit-mode 1)
 
 (defcustom jd:programming-language-major-modes
@@ -39,6 +41,9 @@
 ;; Python
 (elpy-enable)
 (add-hook 'python-mode-hook 'fci-mode)
+;; (add-hook 'python-mode-hook
+;;           (defun jd:python-mode-format-code ()
+;;             (add-hook 'before-save-hook 'elpy-format-code)))
 
 ;; Fucking slow down everything
 ;; (semantic-mode 1)
