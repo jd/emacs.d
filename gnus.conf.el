@@ -9,9 +9,19 @@
                (nnimap-shell-program
                 "/usr/local/opt/dovecot/libexec/dovecot/imap -o mail_location=maildir:~/Mail/Danjou")))
 
+(setq gnus-secondary-select-methods
+      '((nnimap "Mergify"
+                (nnimap-stream shell)
+                (nnimap-shell-program
+                 "/usr/local/opt/dovecot/libexec/dovecot/imap -o 'mail_location=maildir:~/Mail/Mergify'"))))
+
+
 (setq gnus-novice-user nil)             ; I AM NOT!
+
 (setq gnus-spam-process-destinations
-      '(("." "Spam")))
+      '(("^nnimap\\+Mergify:" "nnimap+Mergify:[Gmail].Spam")
+        ("." "Spam")))
+
 (setq gnus-agent nil)                   ; No agent
 (setq gnus-summary-line-format
       (concat "%z%U%R %~(max-right 17)~(pad-right 17)&user-date;  "
@@ -209,15 +219,15 @@ Code of Conduct: http://python.org/psf/codeofconduct/
         ("debian"
          (address "acid@debian.org")
          (organization "Debian"))
-        ("mergify"
+        ("Mergify"
          (address "jd@mergify.io")
          (signature "Julien Danjou")
-         (organization "Mergify.io"))
-        ("mergify\.support"
+         (organization "Mergify"))
+        ("Mergify:INBOX\.support"
          (address "jd@mergify.io")
          (reply-to "support@mergify.io")
          (Cc "support@mergify.io")
-         (organization "Mergify.io"))))
+         (organization "Mergify"))))
 
 (setq gnus-gcc-mark-as-read t)
 ;; Automatically sign when sending mails

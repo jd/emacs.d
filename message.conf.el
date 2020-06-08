@@ -37,3 +37,10 @@
 (setq smtpmail-smtp-server "smtp.fastmail.com")
 (setq smtpmail-stream-type 'starttls)
 (setq smtpmail-smtp-service "submission")
+
+(setq message-send-mail-function
+      (defun jd:message-smtpmail-send-it ()
+        (if (string-match-p "mergify.io" (message-field-value "From"))
+            (let ((smtpmail-smtp-server "smtp.gmail.com"))
+              (message-smtpmail-send-it))
+          (message-smtpmail-send-it))))
