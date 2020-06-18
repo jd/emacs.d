@@ -223,7 +223,7 @@ Code of Conduct: http://python.org/psf/codeofconduct/
          (address "jd@mergify.io")
          (signature "Julien Danjou")
          (organization "Mergify"))
-        ("Mergify:INBOX\.support"
+        ("Mergify:Support"
          (address "jd@mergify.io")
          (reply-to "support@mergify.io")
          (Cc "support@mergify.io")
