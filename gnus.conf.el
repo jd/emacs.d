@@ -221,7 +221,7 @@ Code of Conduct: http://python.org/psf/codeofconduct/
          (organization "Debian"))
         ("Mergify"
          (address "jd@mergify.io")
-         (signature "Julien Danjou")
+         (signature-file "~/.signature.mergify")
          (organization "Mergify"))
         ("Mergify:Support"
          (address "jd@mergify.io")
