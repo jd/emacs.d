@@ -45,6 +45,7 @@
                    flycheck-color-mode-line
                    crux
                    color-identifiers-mode
+                   typescript-mode
                    ))
   (unless (package-installed-p package)
     (package-install package)))
