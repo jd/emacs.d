@@ -11,8 +11,6 @@
     (eval-after-load (match-string-no-properties 1 file)
       `(load ,(concat user-emacs-directory file)))))
 
-(package-initialize)
-
 ;; Add development directory for some project
 (dolist (dir '("~/Source/naquadah-theme"))
   (when (file-exists-p dir)
@@ -61,7 +59,7 @@ This variable is used in some places.")
 
 ;; C source code
 (setq frame-title-format '("" invocation-name ": %b"))
-(set-frame-font "Hack 12")
+(set-frame-font "Hack Nerd Font 12")
 ;; (set-fontset-font t 'unicode (font-spec :family "Droid Sans"))
 (if (string-equal system-type "darwin")
     (progn
