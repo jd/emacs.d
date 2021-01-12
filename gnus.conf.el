@@ -65,6 +65,8 @@
 (setq gnus-parameters
       '(("."
          (expiry-target . "Trash"))
+        ("^nnimap+Mergify:Support"
+         (subscribed . t))
         ("^Lists\\."
          (subscribed . t))
         ("^Lists\\.Gnus\\.ding"
@@ -226,7 +228,7 @@ Code of Conduct: http://python.org/psf/codeofconduct/
         ("Mergify:Support"
          (address "jd@mergify.io")
          (reply-to "support@mergify.io")
-         (Cc "support@mergify.io")
+         (bcc "support@mergify.io")
          (organization "Mergify"))))
 
 (setq gnus-gcc-mark-as-read t)
