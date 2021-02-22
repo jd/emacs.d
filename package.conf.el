@@ -5,6 +5,7 @@
 
 (dolist (package '(naquadah-theme
                    elpy
+                   graphviz-dot-mode
                    rjsx-mode
                    ;; anaconda-mode
 		   oauth2		; Should be a dep of google-stuff
