@@ -74,7 +74,8 @@ This variable is used in some places.")
                                         ; composition
 (tool-bar-mode -1)			; Kill the toolbar
 (setq scroll-step 1)
-(setq visible-bell t)
+(setq visible-bell nil)
+(setq ring-bell-function 'ignore)
 (setq-default fill-column 79)
 (setq user-full-name "Julien Danjou")
 (defalias 'yes-or-no-p 'y-or-n-p)
