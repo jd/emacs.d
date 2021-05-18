@@ -45,6 +45,7 @@
                    flycheck
                    flycheck-color-mode-line
                    crux
+                   rust-mode
                    color-identifiers-mode
                    typescript-mode
                    ))
