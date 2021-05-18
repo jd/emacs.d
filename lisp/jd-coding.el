@@ -1,5 +1,6 @@
 (require 'cl)
 
+(require 'git-commit)
 (global-git-commit-mode 1)
 
 (defcustom jd:programming-language-major-modes
