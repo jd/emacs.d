@@ -30,7 +30,6 @@
 		   rainbow-delimiters
 		   htmlize
 		   lua-mode
-		   google-contacts
 		   yaml-mode
 		   haskell-mode
 		   php-mode

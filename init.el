@@ -52,8 +52,6 @@ This variable is used in some places.")
 (require 'saveplace)
 (require 'uniquify)
 (require 'mmm-auto)
-(require 'google-contacts-message)
-(require 'google-contacts-gnus)
 
 (powerline-default-theme)
 
