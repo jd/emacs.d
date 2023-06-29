@@ -7,3 +7,4 @@
 ;; Autosave out of my way
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
+(add-to-list 'auto-mode-alist '("\\.mdx\\'" . markdown-mode))
