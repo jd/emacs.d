@@ -9,13 +9,6 @@
                (nnimap-shell-program
                 "/usr/local/opt/dovecot/libexec/dovecot/imap -o mail_location=maildir:~/Mail/Danjou")))
 
-(setq gnus-secondary-select-methods
-      '((nnimap "Mergify"
-                (nnimap-stream shell)
-                (nnimap-shell-program
-                 "/usr/local/opt/dovecot/libexec/dovecot/imap -o 'mail_location=maildir:~/Mail/Mergify'"))))
-
-
 (setq gnus-novice-user nil)             ; I AM NOT!
 
 (setq gnus-spam-process-destinations
